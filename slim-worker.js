@@ -1,17 +1,17 @@
 
-const SITE_ORIGIN = "https://raw.githubusercontent.com/WildUseCase/cycle-map-deploy-temp/d7843255da6d0b9fea3f557c30e89f20a74fd98a/";
+const SITE_ORIGIN = "https://raw.githubusercontent.com/WildUseCase/cycle-map-deploy-temp/382d2292c7ee9a4e81d5ed25fc1158d7d9081662/";
 function __name(fn, n){ try { Object.defineProperty(fn, "name", { value: n, configurable: true }); } catch(e) {} return fn; }
 async function loadPage(env){
   try {
     if (env.SITE) {
-      const cached = await env.SITE.get("page.html.v121");
+      const cached = await env.SITE.get("page.html.v122");
       if (cached) return cached;
     }
   } catch (e) {}
   const r = await fetch(SITE_ORIGIN + "page.html", { cf: { cacheTtl: 0 } });
   if (!r.ok) return "<!doctype html><title>Cycle Map</title><p>Could not load the page (" + r.status + ").</p>";
   const html = await r.text();
-  try { if (env.SITE) await env.SITE.put("page.html.v121", html); } catch (e) {}
+  try { if (env.SITE) await env.SITE.put("page.html.v122", html); } catch (e) {}
   return html;
 }
 async function proxyAsset(env, name, type){
