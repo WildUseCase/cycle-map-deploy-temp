@@ -53,6 +53,28 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 .wrap{max-width:1180px;margin:0 auto;padding:28px 20px 64px}
+/* Bump, Family, and Letters of Love use the extra desktop width.
+   Chart / Mission Control / Little Ears stay on the original column. */
+@media (min-width:1100px){
+  body.fam-mode .wrap,
+  body.love-mode .wrap,
+  body.bump-mode .wrap{
+    max-width:min(1680px, calc(100vw - 56px));
+    padding-left:36px;
+    padding-right:36px;
+  }
+  body.love-mode .love{max-width:none;padding-left:0;padding-right:0}
+  body.love-mode .lvform{max-width:560px}
+  body.fam-mode .fmhero-tree{max-width:980px}
+  body.fam-mode .fmgallery{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+  body.bump-mode #bumpMain{
+    display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:start;
+  }
+  body.bump-mode #bumpMain .bhero,
+  body.bump-mode #bumpMain .bworld,
+  body.bump-mode #bumpMain .bnav,
+  body.bump-mode #bumpMain .bfoot{grid-column:1 / -1}
+}
 h1,h2,h3{margin:0;font-family:var(--serif);font-weight:600;text-wrap:balance}
 button{font:inherit;color:inherit}
 input,select,textarea{font:inherit;color:inherit}
@@ -7775,6 +7797,7 @@ function showTab(name){
   document.body.classList.toggle("fam-mode", name === "fam"); /* sage, edge to edge */
   document.body.classList.toggle("love-mode", name === "love"); /* denim, edge to edge */
   document.body.classList.toggle("ears-mode", name === "ears"); /* watercolour washes */
+  document.body.classList.toggle("bump-mode", name === "bump"); /* wide desktop column */
   try{ localStorage.setItem("cyclemap.tab", name); }catch(e){}
   if(name === "bump") renderBump();
   else if(name === "ears") renderEars();
