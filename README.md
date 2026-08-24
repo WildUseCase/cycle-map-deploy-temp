@@ -1,2 +1,1 @@
-# cycle-map-deploy-temp
-Temporary staging for cycle-map worker deploy
+Temporary staging repo. Worker source removed after the live v116 desktop+phone deploy.
