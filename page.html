@@ -1,5 +1,5 @@
 <title>Cycle Map: Kayla + Ollie baby timeline</title>
-<meta name="cycle-map-build" content="2026-08-24-v118-graphics-plus-library">
+<meta name="cycle-map-build" content="2026-08-24-v120-original-art-wide-only">
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
 <meta http-equiv="Pragma" content="no-cache">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E %3Ccircle cx=%2216%22 cy=%2216%22 r=%2216%22 fill=%22%23243028%22/%3E %3Cpath d=%22M7.6 11.2 6.2 4.4l6 3.1zM24.4 11.2l1.4-6.8-6 3.1z%22 fill=%22%23EDEEEA%22/%3E %3Cpath d=%22M16 5.2c5.2 0 8.6 4.9 8.6 11.4 0 4.6-3.6 7.8-8.6 7.8s-8.6-3.2-8.6-7.8C7.4 10.1 10.8 5.2 16 5.2z%22 fill=%22%23EDEEEA%22/%3E %3Ccircle cx=%2212.3%22 cy=%2214.6%22 r=%223.5%22 fill=%22%23243028%22/%3E %3Ccircle cx=%2219.7%22 cy=%2214.6%22 r=%223.5%22 fill=%22%23243028%22/%3E %3Ccircle cx=%2212.3%22 cy=%2214.6%22 r=%221.15%22 fill=%22%23EDEEEA%22/%3E %3Ccircle cx=%2219.7%22 cy=%2214.6%22 r=%221.15%22 fill=%22%23EDEEEA%22/%3E %3Cpath d=%22M16 17.4l-1.9 3.1h3.8z%22 fill=%22%23B8791F%22/%3E %3Cpath d=%22M11.4 24.3v2.2M14 24.8V27M18 24.8V27M20.6 24.3v2.2%22 stroke=%22%23EDEEEA%22 stroke-width=%221.5%22 stroke-linecap=%22round%22/%3E %3C/svg%3E">
@@ -68,7 +68,6 @@ html{overflow-x:hidden}
     padding-right:36px;
   }
 }
-
 .chrome{width:100%;padding:24px 36px 0;box-sizing:border-box}
 @media (max-width:660px){
   .chrome{padding:16px 14px 0}
@@ -1740,77 +1739,42 @@ body.fam-mode #tabFam.on{color:#4A5638;border-bottom-color:#B99C55}
 }
 
 /* ---------- the family library, in three dimensions ---------- */
-.fmlibrow{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin:22px 0 0}
+.fmlibrow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:26px 0 0}
 .fmlibnote{font-family:var(--mono);font-size:.62rem;color:var(--f-soft);letter-spacing:.06em}
-.fmlibdoor{
-  display:flex;align-items:center;gap:16px;width:100%;margin:4px 0 30px;
-  text-align:left;cursor:pointer;
-  background:
-    linear-gradient(180deg,rgba(255,220,160,.08),transparent 40%),
-    linear-gradient(180deg,#4A3422,#2A1A10);
-  color:#F3E6C8;border:1px solid #B08A4A;border-radius:12px;
-  padding:16px 20px;
-  box-shadow:0 20px 44px -22px rgba(40,24,10,.65), inset 0 1px 0 rgba(255,230,180,.18);
-}
-.fmlibdoor-mark{
-  width:52px;height:52px;flex:0 0 auto;border-radius:8px;
-  background:linear-gradient(#6B4A26,#3A2412);border:1px solid #C4A056;
-  display:grid;place-items:center;font-size:1.45rem;
-}
-.fmlibdoor-copy{flex:1;min-width:0}
-.fmlibdoor-copy strong{
-  display:block;font-family:var(--f-display);font-size:1.22rem;font-weight:600;
-  letter-spacing:.01em;color:#F7ECD0;
-}
-.fmlibdoor-copy em{
-  display:block;margin-top:4px;font-style:normal;font-family:var(--mono);
-  font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#C4B08A;
-}
-.fmlibdoor-go{
-  font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
-  color:#E8D9BC;white-space:nowrap;
-}
-.fmlibdoor:hover{filter:brightness(1.08);border-color:#E0C070}
-#libOverlay{position:fixed;inset:0;z-index:80;background:#090604}
+#libOverlay{position:fixed;inset:0;z-index:60;background:#120D08}
 #libView{
   position:absolute;inset:0;overflow:hidden;
-  perspective:980px;perspective-origin:50% 46%;
-  background:#090604;cursor:grab;touch-action:none;
+  perspective:820px;perspective-origin:50% 46%;
+  background:linear-gradient(#3E3122,#241811);
+  cursor:grab;touch-action:none;
 }
-#libView.dragging, #libView.locked{cursor:none}
-#libScene{position:absolute;left:50%;top:50%;transform-style:preserve-3d;will-change:transform}
+#libView.dragging{cursor:grabbing}
+#libScene{position:absolute;left:50%;top:50%;transform-style:preserve-3d}
 #libScene *{transform-style:preserve-3d}
 .lp{position:absolute;left:0;top:0;backface-visibility:hidden}
-#libWx{position:absolute;inset:0;z-index:2;pointer-events:none}
 #libVignette{
-  position:absolute;inset:0;pointer-events:none;z-index:3;
-  background:
-    radial-gradient(ellipse at 50% 42%,transparent 48%,rgba(8,5,2,.55) 100%),
-    linear-gradient(180deg,rgba(0,0,0,.18),transparent 18%,transparent 78%,rgba(0,0,0,.35));
+  position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse at 50% 42%,transparent 55%,rgba(10,6,3,.45) 100%);
 }
 #libClose{
-  position:absolute;top:16px;right:16px;z-index:6;cursor:pointer;
+  position:absolute;top:16px;right:16px;z-index:3;cursor:pointer;
   font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;
-  color:#E8D9BC;background:rgba(24,16,9,.78);border:1px solid rgba(232,217,188,.4);
+  color:#E8D9BC;background:rgba(24,16,9,.72);border:1px solid rgba(232,217,188,.4);
   border-radius:999px;padding:10px 18px;
 }
-#libClose:hover{background:rgba(60,42,22,.9)}
-#libHud{
-  position:absolute;left:16px;bottom:16px;z-index:6;pointer-events:none;
-  color:#F3E6C8;text-shadow:0 2px 12px rgba(0,0,0,.8);
-}
-#libSeason{margin:0 0 4px;font-family:Georgia,serif;font-size:1.08rem;font-weight:600}
+#libClose:hover{background:rgba(60,42,22,.85)}
 #libHelp{
-  font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;color:rgba(232,217,188,.82);
+  position:absolute;left:16px;bottom:14px;z-index:3;pointer-events:none;
+  font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;color:rgba(232,217,188,.75);
 }
-#libPad{position:absolute;right:14px;bottom:14px;z-index:6;display:none;text-align:center}
+#libPad{position:absolute;right:14px;bottom:14px;z-index:3;display:none;text-align:center}
 #libPad button{
   width:52px;height:46px;margin:2px;font-size:1rem;color:#E8D9BC;cursor:pointer;
-  background:rgba(24,16,9,.78);border:1px solid rgba(232,217,188,.35);border-radius:8px;
+  background:rgba(24,16,9,.72);border:1px solid rgba(232,217,188,.35);border-radius:8px;
 }
-@media (pointer:coarse){ #libPad{display:block} #libHud #libHelp{display:none} }
+@media (pointer:coarse){ #libPad{display:block} #libHelp{display:none} }
 #libCard{
-  position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:7;
+  position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:4;
   width:min(430px,88vw);background:#F7F0DF;color:#2E2519;border-radius:8px;
   padding:18px 20px;box-shadow:0 24px 60px -18px rgba(0,0,0,.9);
 }
@@ -1824,6 +1788,7 @@ body.fam-mode #tabFam.on{color:#4A5638;border-bottom-color:#B99C55}
 #libCardAuthor{margin:0;font-size:.86rem;color:#6B5B41;font-style:italic}
 #libCardNote{margin:10px 0 0;font-size:.85rem;line-height:1.55;color:#43382A}
 #libCardNote:empty{display:none}
+/* spines */
 .lspine{
   position:absolute;bottom:0;cursor:pointer;border-radius:2px 2px 0 0;
   box-shadow:inset -2px 0 3px rgba(0,0,0,.35), inset 1px 0 1px rgba(255,255,255,.14);
@@ -1834,90 +1799,13 @@ body.fam-mode #tabFam.on{color:#4A5638;border-bottom-color:#B99C55}
   font-family:Georgia,serif;font-size:8.5px;line-height:1;letter-spacing:.02em;
   color:rgba(255,248,230,.92);text-align:center;pointer-events:none;
 }
-.lspine:hover{filter:brightness(1.28)}
+.lspine:hover{filter:brightness(1.25)}
 .lplaque{
   position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;
   font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:#F3E2B8;
   background:linear-gradient(#6B4A26,#4A3016);border:1px solid #8A6A3B;border-radius:3px;
   padding:4px 12px;text-transform:uppercase;
 }
-.libwin{position:absolute;overflow:hidden;border:14px solid #140E08;
-  box-shadow:0 0 90px 16px rgba(180,210,160,.18), inset 0 0 40px rgba(255,255,255,.08)}
-.libsky,.libhills,.libground,.libwxfilm{position:absolute;inset:0;pointer-events:none}
-.libtrunk{position:absolute;bottom:8%;border-radius:7px;opacity:.9}
-.libtree{position:absolute;border-radius:50% 50% 42% 42%}
-.libmullion-v,.libmullion-h{position:absolute;background:#140E08;z-index:4}
-.libfire{position:absolute;overflow:visible}
-.libfire-stone{
-  position:absolute;inset:0;
-  background:
-    linear-gradient(90deg,#2A1C12,#4A3220 8%,#3A2818 50%,#4A3220 92%,#2A1C12),
-    repeating-linear-gradient(0deg,transparent 0 28px,rgba(0,0,0,.18) 28px 30px);
-  border:10px solid #1A1008;
-  box-shadow:inset 0 0 40px rgba(0,0,0,.55), 0 0 60px rgba(255,120,30,.12);
-}
-.libfire-open{
-  position:absolute;left:16%;right:16%;top:16%;bottom:14%;
-  background:#070402;overflow:hidden;
-  box-shadow:inset 0 0 50px #000, inset 0 -20px 40px rgba(255,80,10,.25);
-}
-.libfire-glow{
-  position:absolute;left:0;right:0;bottom:0;height:70%;
-  background:radial-gradient(circle at 50% 100%,rgba(255,150,40,.7),rgba(255,60,0,.2) 45%,transparent 70%);
-  animation:libglow 1.4s ease-in-out infinite alternate;
-  pointer-events:none;
-}
-.libflame{position:absolute;bottom:18%;left:50%;transform-origin:50% 100%;
-  border-radius:50% 50% 20% 20%;filter:blur(.6px);mix-blend-mode:screen;
-  animation:libflame .42s ease-in-out infinite alternate}
-.libflame-b{width:54%;height:62%;margin-left:-27%;background:radial-gradient(circle at 50% 78%,#FFE7A0 0%,#FF7A18 40%,#C43000 68%,transparent 76%);animation-duration:.55s}
-.libflame-m{width:36%;height:50%;margin-left:-18%;left:46%;background:radial-gradient(circle at 50% 80%,#FFF6C8,#FF5410 55%,transparent 72%);animation-duration:.38s;animation-delay:.1s}
-.libflame-s{width:22%;height:38%;margin-left:-11%;left:58%;background:radial-gradient(circle at 50% 80%,#FFFCE0,#FF9A20 50%,transparent 70%);animation-duration:.48s;animation-delay:.2s}
-.liblog{position:absolute;bottom:8%;height:14%;border-radius:40px;box-shadow:inset 0 0 8px #000}
-.libember{position:absolute;bottom:22%;width:5px;height:5px;border-radius:50%;background:#FFC070;
-  animation:libember 2.4s linear infinite;pointer-events:none}
-.libsmoke{position:absolute;left:30%;right:30%;bottom:55%;height:50%;
-  background:radial-gradient(ellipse at 50% 80%,rgba(180,170,160,.22),transparent 70%);
-  animation:libsmoke 3.2s ease-in-out infinite;pointer-events:none;filter:blur(8px)}
-.libmantel{position:absolute;left:-10%;right:-10%;top:-14px;height:22px;
-  background:linear-gradient(#8A6238,#5A3A1C 55%,#3A2410);border:1px solid #C4A060;
-  box-shadow:0 6px 10px rgba(0,0,0,.4)}
-.libhearth{position:absolute;left:-6%;right:-6%;bottom:-18px;height:18px;
-  background:linear-gradient(#4A3422,#2A1A10);box-shadow:0 8px 16px rgba(0,0,0,.5)}
-@keyframes libflame{
-  0%{transform:translateX(-50%) scaleY(.88) scaleX(1.08) rotate(-2deg);opacity:.82}
-  100%{transform:translateX(-46%) scaleY(1.16) scaleX(.9) rotate(3deg);opacity:1}
-}
-@keyframes libglow{
-  0%{opacity:.7;filter:brightness(.9)}
-  100%{opacity:1;filter:brightness(1.15)}
-}
-@keyframes libember{
-  0%{transform:translate(0,0) scale(1);opacity:.9}
-  100%{transform:translate(18px,-90px) scale(.2);opacity:0}
-}
-@keyframes libsmoke{
-  0%{opacity:.15;transform:translateY(8px) scaleX(.9)}
-  50%{opacity:.35;transform:translateY(-6px) scaleX(1.1)}
-  100%{opacity:.12;transform:translateY(-16px) scaleX(.95)}
-}
-.libglass{position:absolute;inset:0;z-index:5;pointer-events:none;
-  background:linear-gradient(135deg,rgba(255,255,255,.16),transparent 42%,rgba(160,190,230,.05) 70%,transparent);
-  box-shadow:inset 0 0 30px rgba(255,255,255,.06)}
-
-#libOverlay[data-season="summer"] .libsky{background:linear-gradient(#6EA8D4 0%,#B7D6EF 28%,#C9E4A4 62%,#5E8A44 100%)}
-#libOverlay[data-season="spring"] .libsky{background:linear-gradient(#8FBFDC 0%,#D7E9C4 58%,#7A9E52 100%)}
-#libOverlay[data-season="autumn"] .libsky{background:linear-gradient(#C9A06A 0%,#E2B36A 36%,#C47832 70%,#6A3A18 100%)}
-#libOverlay[data-season="winter"] .libsky{background:linear-gradient(#9BB3C8 0%,#E4ECF2 52%,#C5D0C2 100%)}
-#libOverlay[data-tod="dusk"] .libsky{filter:saturate(.85) brightness(.78)}
-#libOverlay[data-tod="night"] .libsky{background:linear-gradient(#0C1730 0%,#1A2C48 46%,#1C2A1A 100%) !important}
-#libOverlay[data-weather="overcast"] .libsky{filter:grayscale(.25) brightness(.82)}
-#libOverlay[data-weather="rain"] .libsky{filter:grayscale(.2) brightness(.7) saturate(.7)}
-#libOverlay[data-season="summer"] .libtree{background:radial-gradient(circle at 40% 35%,#6E9A48,#2F5A28 70%)}
-#libOverlay[data-season="spring"] .libtree{background:radial-gradient(circle at 40% 35%,#8FBE5A,#3C6A32 72%)}
-#libOverlay[data-season="autumn"] .libtree{background:radial-gradient(circle at 40% 35%,#D4782A,#8A3A12 72%)}
-#libOverlay[data-season="winter"] .libtree{background:radial-gradient(circle at 40% 35%,#D8E4EA,#6A7A70 76%)}
-
 
 /* ---------- Letters of Love: paper, tape and keepsakes ---------- */
 /* ---- edge to edge ----
@@ -3105,13 +2993,9 @@ citations back to the primary studies, which is a good first stop if you ever ne
     <div id="libView">
       <div id="libScene"></div>
     </div>
-    <canvas id="libWx"></canvas>
     <div id="libVignette"></div>
     <button id="libClose" type="button">Leave the library</button>
-    <div id="libHud">
-      <p id="libSeason"></p>
-      <div id="libHelp">WASD or arrows to walk &middot; mouse to look &middot; click a spine for a book &middot; Esc to leave</div>
-    </div>
+    <div id="libHelp">drag to look &middot; WASD or arrow keys to walk &middot; click a spine to take a book down</div>
     <div id="libPad">
       <button data-mv="f" type="button" aria-label="Walk forward">&#9650;</button>
       <div>
@@ -7714,8 +7598,8 @@ var WOMEN_SCI = [
 ["Figuring","Maria Popova"]];
 
 /* ---- the room ---- */
-var LIB = { open:false, yaw:0, pitch:0, x:0, z:820, keys:{}, raf:0, last:0, wx:[] };
-var LIB_W = 2100, LIB_D = 2800, LIB_H = 720;
+var LIB = { open:false, yaw:0, pitch:0, x:0, z:820, keys:{}, timer:null, built:false };
+var LIB_W = 1900, LIB_D = 2600, LIB_H = 600;    /* room box, world units */
 
 function libEl(cls, css){
   var d = document.createElement("div");
@@ -7732,6 +7616,7 @@ function libPlane(parent, w, h, transform, css){
 var LIB_SPINES = ["#6B3A2A","#7A4A2E","#54432C","#3E4A3A","#6B5A36","#803A28",
   "#4A3A50","#2E4A55","#7A6242","#5A3226","#44552E","#703E3E","#585048","#8A5A30"];
 
+/* one bookcase: frame, shelves, and rows of clickable spines */
 function libCase(parent, w, h, transform, title, books, kick){
   var wood = "background:linear-gradient(#4E3A24,#382817);box-shadow:inset 0 0 40px rgba(0,0,0,.4);";
   var c = libPlane(parent, w, h, transform, wood + "border:6px solid #241708;");
@@ -7757,6 +7642,7 @@ function libCase(parent, w, h, transform, title, books, kick){
         "px;background:linear-gradient(90deg," + LIB_SPINES[(bi * 5 + r) % LIB_SPINES.length] +
         ",rgba(0,0,0,.25))");
       if(bw >= 16){
+        var t = libEl(""); t.className = ""; 
         var lab = document.createElement("i");
         lab.textContent = b[0];
         sp.appendChild(lab);
@@ -7768,385 +7654,202 @@ function libCase(parent, w, h, transform, title, books, kick){
     }
     c.appendChild(shelf);
   }
-  return bi;
-}
-
-function libClimate(){
-  var now = new Date(), m = now.getMonth(), h = now.getHours();
-  var season = (m === 11 || m < 2) ? "winter" : m < 5 ? "spring" : m < 8 ? "summer" : "autumn";
-  var tod = (h < 6 || h >= 21) ? "night" : (h >= 18 || h < 8) ? "dusk" : "day";
-  var seed = (now.getFullYear() * 400 + m * 32 + now.getDate()) % 100;
-  var weather = "sun";
-  if(season === "winter") weather = seed < 55 ? "snow" : seed < 80 ? "overcast" : "sun";
-  else if(season === "spring") weather = seed < 38 ? "rain" : seed < 55 ? "overcast" : "sun";
-  else if(season === "summer") weather = seed < 12 ? "rain" : seed < 22 ? "overcast" : "sun";
-  else weather = seed < 28 ? "rain" : seed < 52 ? "overcast" : "sun";
-  if(tod === "night" && weather === "sun") weather = "overcast";
-  return { season: season, weather: weather, tod: tod, hour: h };
-}
-
-function libForestWin(parent, left, top, w, h, climate){
-  var win = libEl("libwin", "left:" + left + "px;top:" + top + "px;width:" + w + "px;height:" + h + "px;");
-  win.appendChild(libEl("libsky"));
-  var hills = libEl("libhills", "background:" +
-    (climate.season === "winter"
-      ? "radial-gradient(120% 70% at 20% 110%,#C9D4C6 0 42%,transparent 44%),radial-gradient(110% 70% at 80% 115%,#B7C4B8 0 48%,transparent 50%)"
-      : climate.season === "autumn"
-      ? "radial-gradient(120% 70% at 18% 110%,#8A5A28 0 42%,transparent 44%),radial-gradient(110% 70% at 82% 115%,#6A3A16 0 48%,transparent 50%)"
-      : "radial-gradient(120% 70% at 18% 110%,#4A6A32 0 42%,transparent 44%),radial-gradient(110% 70% at 82% 115%,#3A5A28 0 48%,transparent 50%)"));
-  win.appendChild(hills);
-  var trees = [
-    [8, 38, 42, 70], [22, 28, 34, 62], [38, 42, 48, 78], [55, 24, 30, 58],
-    [70, 36, 44, 72], [84, 22, 28, 54], [12, 52, 22, 44], [48, 50, 26, 48]
-  ];
-  trees.forEach(function(t, i){
-    var canopy = libEl("libtree", "left:" + t[0] + "%;top:" + t[1] + "%;width:" + t[2] + "%;height:" + t[3] + "%;opacity:" + (0.78 + (i % 3) * 0.07));
-    win.appendChild(canopy);
-    var trunk = libEl("libtrunk", "left:" + (t[0] + t[2] * 0.42) + "%;width:" + Math.max(8, t[2] * 0.12) +
-      "px;height:" + (100 - t[1] - 6) + "%;background:linear-gradient(90deg,#3A2A18,#6B5238 55%,#2A1C10);");
-    win.appendChild(trunk);
-  });
-  win.appendChild(libEl("libground", "top:auto;height:18%;background:linear-gradient(transparent," +
-    (climate.season === "winter" ? "#E8EEF2" : climate.season === "autumn" ? "#6B3A14" : "#3E5C2A") + ");"));
-  for(var i = 1; i < 3; i++){
-    win.appendChild(libEl("libmullion-v", "top:0;bottom:0;width:10px;left:" + (i * 33.3) + "%;margin-left:-5px"));
-  }
-  win.appendChild(libEl("libmullion-h", "left:0;right:0;height:10px;top:46%"));
-  win.appendChild(libEl("libglass"));
-  parent.appendChild(win);
-  return win;
-}
-
-function libFireplace(parent, left, top, w, h){
-  var box = libEl("libfire", "left:" + left + "px;top:" + top + "px;width:" + w + "px;height:" + h + "px;");
-  box.appendChild(libEl("libfire-stone"));
-  var opening = libEl("libfire-open");
-  opening.appendChild(libEl("libfire-glow"));
-  opening.appendChild(libEl("libflame libflame-b"));
-  opening.appendChild(libEl("libflame libflame-m"));
-  opening.appendChild(libEl("libflame libflame-s"));
-  var log1 = libEl("liblog", "left:18%;width:52%;background:linear-gradient(180deg,#6B4226,#2A160C);transform:rotate(-8deg)");
-  var log2 = libEl("liblog", "left:32%;width:48%;bottom:14%;background:linear-gradient(180deg,#5A341C,#1A0C06);transform:rotate(11deg)");
-  opening.appendChild(log1); opening.appendChild(log2);
-  for(var i = 0; i < 8; i++){
-    var em = libEl("libember", "left:" + (28 + i * 6) + "%;animation-delay:" + (i * 0.28) + "s;animation-duration:" + (1.8 + (i % 3) * 0.4) + "s");
-    opening.appendChild(em);
-  }
-  opening.appendChild(libEl("libsmoke"));
-  box.appendChild(opening);
-  box.appendChild(libEl("libmantel"));
-  box.appendChild(libEl("libhearth"));
-  var clock = libEl("", "position:absolute;left:50%;top:-52px;width:36px;height:36px;margin-left:-18px;border-radius:50%;" +
-    "background:radial-gradient(circle at 40% 35%,#F3E6C0,#8A6A30);border:3px solid #3A2410;box-shadow:0 4px 8px rgba(0,0,0,.4)");
-  box.appendChild(clock);
-  parent.appendChild(box);
+  return bi;                       /* how many actually fitted */
 }
 
 function libBuild(){
   var S = document.getElementById("libScene");
   S.innerHTML = "";
   var hw = LIB_W / 2, hd = LIB_D / 2, hh = LIB_H / 2;
-  var climate = libClimate();
-  var ov = document.getElementById("libOverlay");
-  ov.setAttribute("data-season", climate.season);
-  ov.setAttribute("data-weather", climate.weather);
-  ov.setAttribute("data-tod", climate.tod);
-  LIB.climate = climate;
 
-  var names = { summer:"High summer", spring:"Spring", autumn:"Autumn", winter:"Winter" };
-  var wxn = { sun:"sunlit forest", rain:"rain in the trees", snow:"snow beyond the glass", overcast:"a quiet overcast wood" };
-  var todn = { day:"", dusk:" · evening light", night:" · night" };
-  document.getElementById("libSeason").textContent = names[climate.season] + " · " + wxn[climate.weather] + todn[climate.tod];
-
-  /* herringbone floor + red runner */
+  /* floor: brick, with a rug */
   libPlane(S, LIB_W, LIB_D, "translate3d(-" + hw + "px,-" + hh + "px,-" + hd +
-    "px) rotateX(90deg)",
+    "px) rotateX(90deg)",   /* pivot top-left: shift then lay flat */
     "transform-origin:0 0;background:" +
-    "repeating-linear-gradient(90deg,#5A3A24 0 38px,#4A2E1A 38px 40px);" +
-    "box-shadow:inset 0 0 260px rgba(0,0,0,.5)");
-  libPlane(S, 520, LIB_D - 200, "translate3d(-260px," + (hh - 1) + "px," + (hd - 80) + "px) rotateX(-90deg)",
-    "transform-origin:0 0;background:" +
-    "repeating-linear-gradient(0deg,#7A1E24 0 18px,#5C141A 18px 20px)," +
-    "repeating-linear-gradient(90deg,rgba(255,210,140,.08) 0 40px,transparent 40px 80px);" +
-    "border-left:18px solid #4A1014;border-right:18px solid #4A1014;box-shadow:0 0 40px rgba(80,10,14,.35)");
+    "repeating-linear-gradient(0deg,#5E3C2A 0 44px,#4A2E1F 44px 48px)," +
+    "repeating-linear-gradient(90deg,#66412C95 0 90px,#4A2E1F95 90px 94px);" +
+    "box-shadow:inset 0 0 240px rgba(0,0,0,.45)");
+  libPlane(S, 900, 1300, "translate3d(-450px," + (hh - 1) + "px,-650px) rotateX(90deg)",
+    "transform-origin:50% 50%;transform:translate3d(-450px," + (hh - 1) + "px,650px) rotateX(-90deg);" +
+    "transform-origin:0 0;background:radial-gradient(circle at 50% 50%,#5A3222,#452818 70%);" +
+    "border:24px solid #33200F;opacity:.96");
 
-  /* beamed ceiling */
+  /* ceiling: beams and a bright skylight */
   libPlane(S, LIB_W, LIB_D, "translate3d(-" + hw + "px," + (-hh) + "px," + hd +
     "px) rotateX(-90deg)", "transform-origin:0 0;background:" +
-    "repeating-linear-gradient(90deg,#2A1A10 0 70px,#1A1008 70px 280px);");
+    "repeating-linear-gradient(90deg,#332412 0 60px,#221507 60px 260px);");
+  libPlane(S, 700, 820, "translate3d(-350px," + (-hh + 2) + "px," + 240 +
+    "px) rotateX(-90deg)", "transform-origin:0 0;background:" +
+    "linear-gradient(160deg,#EAF3D8,#BCD69A 55%,#9CC27E);box-shadow:0 0 220px 90px rgba(225,240,195,.5);" +
+    "border:14px solid #1E1206");
 
-  /* chandelier glow from above */
-  libPlane(S, 640, 640, "translate3d(-320px," + (-hh + 4) + "px,220px) rotateX(-90deg)",
-    "transform-origin:0 0;background:radial-gradient(circle,rgba(255,214,140,.55),rgba(255,180,80,.12) 42%,transparent 70%);pointer-events:none");
-
-  /* back wall: garden windows + fireplace + round oculus */
+  /* back wall: the garden window */
   var back = libPlane(S, LIB_W, LIB_H, "translate3d(-" + hw + "px,-" + hh + "px,-" + hd + "px)",
-    "background:linear-gradient(#4A3422,#2C1C12);background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 90px,transparent 90px 180px)");
-  libForestWin(back, 70, 40, 680, LIB_H - 70, climate);
-  libFireplace(back, hw - 170, 250, 340, 380);
-  libForestWin(back, LIB_W - 750, 40, 680, LIB_H - 70, climate);
-  var oculus = libEl("libwin", "left:" + (hw - 110) + "px;top:36px;width:220px;height:220px;border-radius:50%;border:16px solid #3A2414;box-shadow:0 0 40px rgba(80,110,70,.25), inset 0 0 20px rgba(0,0,0,.4);overflow:hidden");
-  oculus.appendChild(libEl("libsky"));
-  oculus.appendChild(libEl("libtree", "left:8%;top:18%;width:70%;height:80%;opacity:.9"));
-  oculus.appendChild(libEl("libtree", "left:38%;top:28%;width:58%;height:72%;opacity:.8"));
-  oculus.appendChild(libEl("libglass"));
-  back.appendChild(oculus);
-
-  /* ivy at the window frames */
-  function ivy(parent, x, y, h){
-    var v = libEl("", "position:absolute;left:" + x + "px;top:" + y + "px;width:28px;height:" + h +
-      "px;background:repeating-radial-gradient(circle at 40% 12px,#3A6A28 0 6px,transparent 7px 22px);opacity:.72;pointer-events:none");
-    parent.appendChild(v);
+    "background:linear-gradient(#4A3826,#332414)");
+  var win = libEl("", "position:absolute;left:" + (hw - 430) + "px;top:120px;width:860px;height:" +
+    (LIB_H - 130) + "px;border:16px solid #17100A;" +
+    "background:linear-gradient(#D8EBC0 0%,#A8CC84 34%,#74A85A 62%,#4C7A42 100%);" +
+    "box-shadow:0 0 200px 40px rgba(190,225,150,.28)");
+  /* tree trunks and canopy shadows in the glass */
+  win.appendChild(libEl("", "position:absolute;left:24%;top:0;width:34px;height:100%;" +
+    "background:linear-gradient(90deg,#4A3A28,#6B5238 60%,#3A2C1C);border-radius:6px;opacity:.85"));
+  win.appendChild(libEl("", "position:absolute;left:60%;top:8%;width:22px;height:92%;" +
+    "background:linear-gradient(90deg,#54432C,#75603F 60%,#41321E);border-radius:6px;opacity:.7"));
+  win.appendChild(libEl("", "position:absolute;inset:0;background:" +
+    "radial-gradient(220px 130px at 30% 18%,rgba(58,96,44,.55),transparent 70%)," +
+    "radial-gradient(300px 170px at 70% 30%,rgba(70,110,52,.5),transparent 72%)," +
+    "radial-gradient(260px 150px at 45% 55%,rgba(88,130,66,.4),transparent 70%)"));
+  /* mullions */
+  for(var m = 1; m < 4; m++){
+    win.appendChild(libEl("", "position:absolute;top:0;bottom:0;width:12px;left:" +
+      (m * 25) + "%;background:#17100A"));
   }
-  ivy(back, 62, 36, 280); ivy(back, 738, 50, 220);
-  ivy(back, LIB_W - 760, 40, 260); ivy(back, LIB_W - 86, 48, 300);
+  win.appendChild(libEl("", "position:absolute;left:0;right:0;top:46%;height:12px;background:#17100A"));
+  back.appendChild(win);
 
-  /* hanging lanterns */
-  function lantern(parent, x, y){
-    var l = libEl("", "position:absolute;left:" + x + "px;top:" + y + "px;width:28px;height:42px;" +
-      "background:radial-gradient(circle at 50% 40%,#FFE7A0,#C47820 55%,#3A2410 78%);border-radius:6px 6px 10px 10px;" +
-      "box-shadow:0 0 28px 8px rgba(255,180,60,.45);");
-    parent.appendChild(l);
-  }
-  lantern(back, 90, 48); lantern(back, LIB_W - 120, 48);
-
+  /* shelving, organised like a library */
   var LAM = "Louis L'Amour";
   function tag(list){ return list.map(function(b){ return [b[0], b[1]]; }); }
   var sortT = function(a, b){ return a[0].localeCompare(b[0]); };
 
+  /* left wall - the L'Amour room */
   var L = libPlane(S, LIB_D, LIB_H, "translate3d(-" + hw + "px,-" + hh + "px," + hd +
     "px) rotateY(90deg)", "transform-origin:0 0;background:linear-gradient(#3B2C1B,#241708)");
-  libCase(L, 560, 340, "translate3d(220px,80px,0)", "L'Amour · The Sacketts", tag(LAM_SACKETT), "Western fiction · the Sackett series");
-  libCase(L, 560, 340, "translate3d(220px,360px,0)", "L'Amour · Talon & Chantry / Kilkenny",
+  libCase(L, 520, 300, "translate3d(560px,60px,0)", "L'Amour · The Sacketts", tag(LAM_SACKETT), "Western fiction · the Sackett series");
+  libCase(L, 520, 300, "translate3d(560px,300px,0)", "L'Amour · Talon & Chantry / Kilkenny",
     tag(LAM_TALON_CHANTRY).concat(tag(LAM_KILKENNY)), "Western fiction · series");
   var novA = tag(LAM_NOVELS).sort(sortT);
-  libCase(L, 860, 520, "translate3d(840px,90px,0)", "L'Amour · Novels A–Z", novA, "Western fiction · novels");
-  libCase(L, 560, 340, "translate3d(1780px,80px,0)", "L'Amour · Story Collections", tag(LAM_STORIES).sort(sortT), "Short story collections");
-  libCase(L, 560, 340, "translate3d(1780px,360px,0)", "L'Amour · Nonfiction & Hopalong",
+  libCase(L, 800, 460, "translate3d(1130px,60px,0)", "L'Amour · Novels A–Z", novA, "Western fiction · novels");
+  libCase(L, 520, 300, "translate3d(1980px,60px,0)", "L'Amour · Story Collections", tag(LAM_STORIES).sort(sortT), "Short story collections");
+  libCase(L, 520, 300, "translate3d(1980px,300px,0)", "L'Amour · Nonfiction & Hopalong",
     tag(LAM_NONFIC).concat(tag(LAM_HOPALONG)), "Nonfiction, and four novels written as Tex Burns");
 
+  /* right wall - women in science, and the family's own shelf */
   var R = libPlane(S, LIB_D, LIB_H, "translate3d(" + hw + "px,-" + hh + "px,-" + hd +
     "px) rotateY(-90deg)", "transform-origin:0 0;background:linear-gradient(#3B2C1B,#241708)");
   var wsci = WOMEN_SCI.map(function(b){ return [b[0], "", b[1]]; }).sort(sortT);
-  libCase(R, 860, 520, "translate3d(180px,90px,0)", "Women in Science & Engineering",
+  libCase(R, 800, 460, "translate3d(160px,60px,0)", "Women in Science & Engineering",
     wsci.slice(0, 20), "Women in research, engineering and science");
-  libCase(R, 600, 340, "translate3d(1120px,80px,0)", "Women in Science · II",
+  libCase(R, 560, 300, "translate3d(1030px,60px,0)", "Women in Science · II",
     wsci.slice(20), "Women in research, engineering and science");
   var fam = (typeof famOf === "function" ? famOf("book") : []).map(function(b){
     return [b.title, "", b.author || "", b.note || ""]; });
-  libCase(R, 600, 340, "translate3d(1120px,360px,0)", "The Family Collection",
+  libCase(R, 560, 300, "translate3d(1030px,300px,0)", "The Family Collection",
     fam.length ? fam : [["This shelf is waiting for its first book", "", "Add one on the Family page", ""]],
     "Added by the family, on the Family page");
 
+  /* front wall (behind the start point): a tall case each side of the doorway */
   var F = libPlane(S, LIB_W, LIB_H, "translate3d(" + hw + "px,-" + hh + "px," + hd +
     "px) rotateY(180deg)", "transform-origin:0 0;background:linear-gradient(#3B2C1B,#241708)");
-  libCase(F, 680, 520, "translate3d(80px,90px,0)", "Reading Copies · A–L",
+  libCase(F, 620, 460, "translate3d(90px,60px,0)", "Reading Copies · A–L",
     novA.slice(0, 28), "Reading copies · the same novels, shelved by the door");
-  libCase(F, 680, 520, "translate3d(1340px,90px,0)", "Reading Copies · M–Z",
+  libCase(F, 620, 460, "translate3d(1190px,60px,0)", "Reading Copies · M–Z",
     novA.slice(28), "Reading copies · the same novels, shelved by the door");
 
+  /* furniture: a leather ottoman and two low couches */
   function box(x, y, z, w, h, d, css){
     var g = libEl("", "position:absolute;transform:translate3d(" + x + "px," + y + "px," + z + "px)");
-    libPlane(g, w, d, "rotateX(90deg) translateZ(0px)", "transform-origin:0 0;" + css);
-    libPlane(g, w, h, "translateZ(" + d + "px)", css);
-    libPlane(g, w, h, "", css);
+    libPlane(g, w, d, "rotateX(90deg) translateZ(" + 0 + "px)", "transform-origin:0 0;" + css);
+    libPlane(g, w, h, "translateZ(" + d + "px) translateY(0px)", css);          /* front */
+    libPlane(g, w, h, "", css);                                                  /* back */
     libPlane(g, d, h, "rotateY(90deg)", "transform-origin:0 0;" + css);
     libPlane(g, d, h, "translateX(" + w + "px) rotateY(90deg)", "transform-origin:0 0;" + css);
     S.appendChild(g);
     return g;
   }
-  var leather = "background:linear-gradient(150deg,#7A4526,#5A2F18 70%);box-shadow:inset 0 0 30px rgba(0,0,0,.45);border-radius:6px;";
-  var tuft = "background:radial-gradient(26px 26px at 25% 30%,#8A5230,#5A2F18 80%);box-shadow:inset 0 0 30px rgba(0,0,0,.45);border-radius:8px;";
-  var velvet = "background:radial-gradient(22px 22px at 30% 28%,#C43A3A,#7A1418 78%);box-shadow:inset 0 0 24px rgba(0,0,0,.4);border-radius:10px;";
-  box(-200, LIB_H/2 - 110, -280, 400, 110, 260, tuft);
-  box(-780, LIB_H/2 - 160, -200, 320, 160, 560, leather);
-  box(460, LIB_H/2 - 160, -200, 320, 160, 560, leather);
-  box(-90, LIB_H/2 - 96, 420, 180, 96, 170, velvet);
+  var leather = "background:linear-gradient(150deg,#7A4526,#5A2F18 70%);" +
+    "box-shadow:inset 0 0 30px rgba(0,0,0,.45);border-radius:6px;";
+  var tuft = "background:radial-gradient(26px 26px at 25% 30%,#8A5230,#5A2F18 80%);" +
+    "box-shadow:inset 0 0 30px rgba(0,0,0,.45);border-radius:8px;";
+  box(-190, LIB_H/2 - 120, -420, 380, 120, 260, tuft);          /* ottoman */
+  box(-680, LIB_H/2 - 150, -520, 300, 150, 620, leather);       /* left couch */
+  box(380, LIB_H/2 - 150, -520, 300, 150, 620, leather);        /* right couch */
 
-  /* globe */
-  var globe = libEl("lp", "width:90px;height:90px;border-radius:50%;" +
-    "background:radial-gradient(circle at 32% 28%,#C9E4C0,#3A6A8A 42%,#1A3048 78%);" +
-    "box-shadow:inset -12px -10px 18px rgba(0,0,0,.45), 0 8px 18px rgba(0,0,0,.4)");
-  globe.style.transform = "translate3d(-45px," + (hh - 200) + "px,-40px)";
-  S.appendChild(globe);
-
-  /* potted plants near the windows */
-  function plant(x, z, scale){
-    var g = libEl("", "position:absolute;transform:translate3d(" + x + "px," + (hh - 140 * scale) + "px," + z + "px) scale(" + scale + ")");
-    libPlane(g, 70, 70, "translateX(-35px) rotateX(-20deg)", "transform-origin:50% 100%;background:radial-gradient(circle at 40% 40%,#6A9A44,#2A4A22 70%);border-radius:50%;");
-    libPlane(g, 54, 54, "translateX(-20px) translateY(-18px) rotateX(-20deg)", "transform-origin:50% 100%;background:radial-gradient(circle at 45% 35%,#8FBE5A,#3A5A28 72%);border-radius:50%;");
-    libPlane(g, 36, 32, "translateX(-18px) translateY(88px)", "background:linear-gradient(#8A5A32,#4A2A14);border-radius:0 0 8px 8px;");
-    S.appendChild(g);
-  }
-  plant(-780, -hd + 90, 1.15);
-  plant(780, -hd + 90, 1.05);
-  plant(620, 180, .9);
-
-  /* spiral stair, right-front corner */
-  var stair = libEl("", "position:absolute;transform:translate3d(620px," + (-hh + 40) + "px,780px)");
-  for(var st = 0; st < 14; st++){
-    var ang = st * 26;
-    var rise = st * 44;
-    var tread = libPlane(stair, 160, 46,
-      "translateY(" + (LIB_H - 90 - rise) + "px) rotateY(" + ang + "deg) rotateX(90deg) translateX(40px)",
-      "transform-origin:0 0;background:linear-gradient(90deg,#6B4A28,#3A2412);border:1px solid #1A1008;box-shadow:0 4px 8px rgba(0,0,0,.35)");
-    tread.style.borderRadius = "0 12px 12px 0";
-  }
-  S.appendChild(stair);
-
-  /* firelight on the floor, pulsing */
-  var firelight = libPlane(S, 900, 900, "translate3d(-450px," + (hh - 2) + "px," + (-hd + 280) + "px) rotateX(90deg)",
-    "transform-origin:0 0;background:radial-gradient(circle,rgba(255,140,40,.42),rgba(255,80,10,.12) 38%,transparent 68%);pointer-events:none;animation:libglow 1.4s ease-in-out infinite alternate");
-  firelight.style.zIndex = "2";
-
-  libPlane(S, 900, 900, "translate3d(-450px," + (hh - 2) + "px,120px) rotateX(90deg)",
-    "transform-origin:0 0;background:radial-gradient(circle,rgba(255,200,110,.22),transparent 62%);pointer-events:none");
-
-  libWxSeed(climate);
+  /* lamplight: a warm pool on the floor by the left couch */
+  libPlane(S, 520, 520, "translate3d(-820px," + (hh - 2) + "px,-60px) rotateX(90deg)",
+    "transform-origin:0 0;background:radial-gradient(circle,rgba(255,206,130,.4)," +
+    "rgba(255,190,110,.14) 52%,transparent 70%);pointer-events:none");
+  LIB.built = true;
 }
 
-function libWxSeed(climate){
-  LIB.wx = [];
-  LIB.embers = [];
-  var n = climate.weather === "snow" ? 140 : climate.weather === "rain" ? 160 : 0;
-  for(var i = 0; i < n; i++){
-    LIB.wx.push({
-      x: Math.random(), y: Math.random(),
-      s: climate.weather === "snow" ? (0.4 + Math.random() * 1.4) : (0.7 + Math.random()),
-      v: climate.weather === "snow" ? (0.04 + Math.random() * 0.08) : (0.35 + Math.random() * 0.45)
-    });
-  }
-  for(i = 0; i < 36; i++){
-    LIB.embers.push({
-      x: 0.46 + Math.random() * 0.08, y: 0.62 + Math.random() * 0.12,
-      s: 0.6 + Math.random() * 1.4, v: 0.004 + Math.random() * 0.01,
-      drift: (Math.random() - 0.5) * 0.0008, life: Math.random()
-    });
-  }
-}
-function libWxDraw(){
-  var c = document.getElementById("libWx");
-  if(!c || !LIB.open) return;
-  var w = c.width = c.clientWidth, h = c.height = c.clientHeight;
-  var ctx = c.getContext("2d");
-  ctx.clearRect(0, 0, w, h);
-  var kind = LIB.climate && LIB.climate.weather;
-  if(kind === "rain"){
-    ctx.strokeStyle = "rgba(210,225,240,.45)";
-    ctx.lineWidth = 1.2;
-    LIB.wx.forEach(function(p){
-      p.y += p.v * 0.035; if(p.y > 1.1) p.y = -0.05;
-      var x = p.x * w, y = p.y * h;
-      ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x - 4, y + 18 * p.s); ctx.stroke();
-    });
-  } else if(kind === "snow"){
-    ctx.fillStyle = "rgba(255,255,255,.85)";
-    LIB.wx.forEach(function(p){
-      p.y += p.v * 0.012; p.x += Math.sin(p.y * 12 + p.s) * 0.0008;
-      if(p.y > 1.05){ p.y = -0.04; p.x = Math.random(); }
-      ctx.beginPath(); ctx.arc(p.x * w, p.y * h, p.s * 1.8, 0, Math.PI * 2); ctx.fill();
-    });
-  }
-  /* dust motes in the firelight */
-  ctx.fillStyle = "rgba(255,210,140,.18)";
-  var t = Date.now() * 0.00015;
-  for(var d = 0; d < 24; d++){
-    var mx = 0.5 + Math.sin(t + d) * 0.12;
-    var my = 0.55 + Math.cos(t * 0.7 + d * 1.3) * 0.1;
-    ctx.beginPath(); ctx.arc(mx * w, my * h, 1.2, 0, Math.PI * 2); ctx.fill();
-  }
-}
-
+/* a small window hook so the camera can be driven from the console while
+   testing; harmless in production */
+try{ window.__libcam = function(y, pt, x, z){
+  LIB.yaw = y; LIB.pitch = pt; LIB.x = x; LIB.z = z; libCamera();
+}; }catch(e){}
 function libCamera(){
   var s = document.getElementById("libScene");
   s.style.transform = "rotateX(" + (-LIB.pitch) + "deg) rotateY(" + LIB.yaw + "deg) " +
-    "translate3d(" + (-LIB.x) + "px, 40px," + (-LIB.z) + "px)";
+    "translate3d(" + (-LIB.x) + "px,0px," + (-LIB.z) + "px)";
 }
-function libBlocked(nx, nz){
-  if(nx < -LIB_W/2 + 160 || nx > LIB_W/2 - 160) return true;
-  if(nz < -LIB_D/2 + 180 || nz > LIB_D/2 - 160) return true;
-  if(nx > -900 && nx < -430 && nz > -480 && nz < 380) return true;
-  if(nx > 420 && nx < 900 && nz > -480 && nz < 380) return true;
-  if(nx > -260 && nx < 260 && nz > -420 && nz < -40) return true;
-  if(nx > 540 && nx < 860 && nz > 640 && nz < 980) return true;
-  if(nx > -200 && nx < 110 && nz > 300 && nz < 620) return true;
-  return false;
-}
-function libTick(t){
-  if(!LIB.open) return;
-  var dt = Math.min(48, t - (LIB.last || t)); LIB.last = t;
-  var sp = (LIB.keys.shift ? 28 : 16) * (dt / 16.7);
-  var rad = LIB.yaw * Math.PI / 180;
-  var fx = -Math.sin(rad) * sp, fz = -Math.cos(rad) * sp;
+function libStep(){
+  var sp = 16, rad = LIB.yaw * Math.PI / 180;
+  var fx = Math.sin(rad) * sp, fz = -Math.cos(rad) * sp;  /* wait: define forward below */
+  fx = -Math.sin(rad) * sp; fz = -Math.cos(rad) * sp;
   var k = LIB.keys, dx = 0, dz = 0;
   if(k.f){ dx += fx; dz += fz; }
   if(k.b){ dx -= fx; dz -= fz; }
   if(k.l){ dx += fz; dz -= fx; }
   if(k.r){ dx -= fz; dz += fx; }
   if(dx || dz){
-    var nx = LIB.x + dx, nz = LIB.z + dz;
-    if(!libBlocked(nx, nz)){ LIB.x = nx; LIB.z = nz; }
-    else if(!libBlocked(LIB.x, nz)) LIB.z = nz;
-    else if(!libBlocked(nx, LIB.z)) LIB.x = nx;
+    var nx = Math.max(-LIB_W/2 + 150, Math.min(LIB_W/2 - 150, LIB.x + dx));
+    var nz = Math.max(-LIB_D/2 + 170, Math.min(LIB_D/2 - 150, LIB.z + dz));
+    /* keep out of the furniture */
+    if(!(nx > -760 && nx < 760 && nz > -640 && nz < -80 &&
+         !(nx > -320 && nx < 320 && nz < -520))) { LIB.x = nx; LIB.z = nz; }
+    else { /* try sliding on one axis */
+      if(!(LIB.x > -760 && LIB.x < 760 && nz > -640 && nz < -80)) LIB.z = nz;
+      else if(!(nx > -760 && nx < 760 && LIB.z > -640 && LIB.z < -80)) LIB.x = nx;
+    }
     libCamera();
   }
-  libWxDraw();
-  LIB.raf = requestAnimationFrame(libTick);
 }
 function libOpen(){
   var ov = document.getElementById("libOverlay");
-  libBuild();
-  LIB.open = true; LIB.yaw = 0; LIB.pitch = 4; LIB.x = 0; LIB.z = LIB_D/2 - 560;
+  libBuild();                                   /* rebuild so family books are current */
+  LIB.open = true; LIB.yaw = 0; LIB.pitch = 2; LIB.x = 0; LIB.z = LIB_D/2 - 520;
   ov.hidden = false;
   document.documentElement.style.overflow = "hidden";
   libCamera();
-  LIB.last = 0;
-  if(LIB.raf) cancelAnimationFrame(LIB.raf);
-  LIB.raf = requestAnimationFrame(libTick);
+  if(LIB.timer) clearInterval(LIB.timer);
+  LIB.timer = setInterval(libStep, 30);
 }
 function libClose(){
   LIB.open = false;
   document.getElementById("libOverlay").hidden = true;
   document.getElementById("libCard").hidden = true;
   document.documentElement.style.overflow = "";
-  if(LIB.raf){ cancelAnimationFrame(LIB.raf); LIB.raf = 0; }
-  try{ if(document.exitPointerLock) document.exitPointerLock(); }catch(e){}
+  if(LIB.timer){ clearInterval(LIB.timer); LIB.timer = null; }
 }
 
 (function(){
   var btn = document.getElementById("fmLibBtn");
   if(!btn) return;
   btn.addEventListener("click", libOpen);
-  var tab = document.getElementById("fmLibTab");
-  if(tab) tab.addEventListener("click", libOpen);
   document.getElementById("libClose").addEventListener("click", libClose);
   document.addEventListener("keydown", function(e){
     if(!LIB.open) return;
     if(e.key === "Escape"){ libClose(); return; }
-    if(e.key === "Shift") LIB.keys.shift = true;
     var m = { w:"f", W:"f", ArrowUp:"f", s:"b", S:"b", ArrowDown:"b",
               a:"l", A:"l", ArrowLeft:"l", d:"r", D:"r", ArrowRight:"r" }[e.key];
     if(m){ LIB.keys[m] = true; e.preventDefault(); }
   });
   document.addEventListener("keyup", function(e){
-    if(e.key === "Shift") LIB.keys.shift = false;
     var m = { w:"f", W:"f", ArrowUp:"f", s:"b", S:"b", ArrowDown:"b",
               a:"l", A:"l", ArrowLeft:"l", d:"r", D:"r", ArrowRight:"r" }[e.key];
     if(m) LIB.keys[m] = false;
   });
   var view = document.getElementById("libView"), drag = null;
   view.addEventListener("pointerdown", function(e){
-    if(e.target && e.target.closest && e.target.closest("#libPad, #libClose, #libCard")) return;
     drag = { x: e.clientX, y: e.clientY, yaw: LIB.yaw, pitch: LIB.pitch, moved: 0 };
     view.classList.add("dragging");
     try{ view.setPointerCapture(e.pointerId); }catch(err){}
   });
   view.addEventListener("pointermove", function(e){
     if(!drag) return;
-    var mx = e.movementX || (e.clientX - drag.x), my = e.movementY || (e.clientY - drag.y);
-    drag.moved += Math.abs(mx) + Math.abs(my);
-    LIB.yaw = drag.yaw + (e.clientX - drag.x) * 0.18;
-    LIB.pitch = Math.max(-42, Math.min(42, drag.pitch - (e.clientY - drag.y) * 0.14));
+    drag.moved += Math.abs(e.movementX || 0) + Math.abs(e.movementY || 0);
+    LIB.yaw = drag.yaw + (e.clientX - drag.x) * 0.22;
+    LIB.pitch = Math.max(-38, Math.min(38, drag.pitch - (e.clientY - drag.y) * 0.16));
     libCamera();
   });
   function drop(e){

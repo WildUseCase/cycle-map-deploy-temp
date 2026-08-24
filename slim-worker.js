@@ -4,14 +4,14 @@ function __name(fn, n){ try { Object.defineProperty(fn, "name", { value: n, conf
 async function loadPage(env){
   try {
     if (env.SITE) {
-      const cached = await env.SITE.get("page.html");
+      const cached = await env.SITE.get("page.html.v120");
       if (cached) return cached;
     }
   } catch (e) {}
-  const r = await fetch(SITE_ORIGIN + "page.html", { cf: { cacheTtl: 120 } });
+  const r = await fetch(SITE_ORIGIN + "page.html?v=120", { cf: { cacheTtl: 0 } });
   if (!r.ok) return "<!doctype html><title>Cycle Map</title><p>Could not load the page (" + r.status + ").</p>";
   const html = await r.text();
-  try { if (env.SITE) await env.SITE.put("page.html", html); } catch (e) {}
+  try { if (env.SITE) await env.SITE.put("page.html.v120", html); } catch (e) {}
   return html;
 }
 async function proxyAsset(env, name, type){
