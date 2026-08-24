@@ -485,6 +485,11 @@ var worker_default = {
       return proxyAsset(env, "owl.png", "image/png");
     }
 
+    if (url.pathname === "/owl-night.png") {
+      if (!(await isAuthed(request, env))) return json({ error: "Locked" }, 401);
+      return proxyAsset(env, "owl-night.png", "image/png");
+    }
+
     if (url.pathname === "/tree.jpg") {
       if (!(await isAuthed(request, env))) return json({ error: "Locked" }, 401);
       return proxyAsset(env, "tree.jpg", "image/jpeg");
