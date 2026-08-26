@@ -83,7 +83,7 @@ button:hover{opacity:.88}
 </style>
 <div class="box">
   <h1>Cycle Map</h1>
-  <p>This timeline is private. Enter the passcode to open it.</p>
+  <p>This timeline is private and under construction.</p>
   <form id="f">
     <label for="p">Passcode</label>
     <input id="p" type="password" autocomplete="current-password" autofocus>
