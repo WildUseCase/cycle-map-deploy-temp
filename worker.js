@@ -7,7 +7,7 @@ var OWL_PNG_BYTES = null;
 var OWL_NIGHT_B64 = "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";
 var OWL_NIGHT_BYTES = null;
 var PAGE = `<title>Cycle Map: Kayla + Ollie baby timeline</title>
-<meta name="cycle-map-build" content="2026-08-24-v116-desk-and-phone">
+<meta name="cycle-map-build" content="2026-08-24-v118-support-select">
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
 <meta http-equiv="Pragma" content="no-cache">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E %3Ccircle cx=%2216%22 cy=%2216%22 r=%2216%22 fill=%22%23243028%22/%3E %3Cpath d=%22M7.6 11.2 6.2 4.4l6 3.1zM24.4 11.2l1.4-6.8-6 3.1z%22 fill=%22%23EDEEEA%22/%3E %3Cpath d=%22M16 5.2c5.2 0 8.6 4.9 8.6 11.4 0 4.6-3.6 7.8-8.6 7.8s-8.6-3.2-8.6-7.8C7.4 10.1 10.8 5.2 16 5.2z%22 fill=%22%23EDEEEA%22/%3E %3Ccircle cx=%2212.3%22 cy=%2214.6%22 r=%223.5%22 fill=%22%23243028%22/%3E %3Ccircle cx=%2219.7%22 cy=%2214.6%22 r=%223.5%22 fill=%22%23243028%22/%3E %3Ccircle cx=%2212.3%22 cy=%2214.6%22 r=%221.15%22 fill=%22%23EDEEEA%22/%3E %3Ccircle cx=%2219.7%22 cy=%2214.6%22 r=%221.15%22 fill=%22%23EDEEEA%22/%3E %3Cpath d=%22M16 17.4l-1.9 3.1h3.8z%22 fill=%22%23B8791F%22/%3E %3Cpath d=%22M11.4 24.3v2.2M14 24.8V27M18 24.8V27M20.6 24.3v2.2%22 stroke=%22%23EDEEEA%22 stroke-width=%221.5%22 stroke-linecap=%22round%22/%3E %3C/svg%3E">
@@ -914,7 +914,7 @@ body.bump-mode .btn{border-color:#E0B7D4;color:#6B3D68}
 .bfacts li:nth-child(2n){background:var(--b-mint)}
 .bfacts li:nth-child(3n){background:var(--b-pink)}
 .bfacts li::before{
-  content:"✿";position:absolute;left:15px;top:11px;color:var(--b-accent);font-size:.9rem;
+  content:"â¿";position:absolute;left:15px;top:11px;color:var(--b-accent);font-size:.9rem;
 }
 .bnav{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
 .bbtn{
@@ -1166,7 +1166,7 @@ body.ears-mode{
   content:"+";position:absolute;right:4px;top:12px;font-size:1.2rem;color:var(--e-accent);
   transition:transform .15s;
 }
-.esec[open] summary::after{content:"–"}
+.esec[open] summary::after{content:"â"}
 .esec summary:hover .etitle{color:var(--e-accent)}
 .ekick{
   font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
@@ -1391,6 +1391,7 @@ body.ears-mode{
 .supcal .s{font-family:var(--serif);font-weight:600;color:var(--ink)}
 .supcal .t{color:var(--team);font-size:.8rem}
 .supcal .empty{grid-column:1/-1;color:var(--ink-faint);font-size:.82rem;padding:14px 12px;line-height:1.5}
+.supcal[hidden]{display:none!important}
 .supdl-row{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}
 .supdl-row .btn{align-self:flex-end;min-height:40px}
 .supdl-f{display:block}
@@ -2155,7 +2156,7 @@ body.mc-mode .utilbar{border-top-color:#2C3860}
 body.mc-mode .ubtn{color:#7A8AB8}
 body.mc-mode .ubtn:hover:not(:disabled){color:#7FE3FF}
 body.mc-mode .udot{color:#33406B}
-/* night owl is a separate transparent PNG — CSS invert flattened onto a black card */
+/* night owl is a separate transparent PNG â CSS invert flattened onto a black card */
 body.mc-mode .art{mix-blend-mode:normal;filter:none}
 @media (max-width:660px){
   body.mc-mode .artwrap{
@@ -2453,13 +2454,14 @@ body.mc-mode .art{mix-blend-mode:normal;filter:none}
     <div class="supdl" id="supDl">
       <div class="supdl-head">
         <h3>Support days <em id="supCount"></em></h3>
-        <p>Calendar of every day someone is in Support team. Choose your name and a format, then Download.</p>
+        <p>Calendar of every day someone is in Support team. Pick a name to see their days, then a format and Download.</p>
       </div>
       <div class="supdl-row">
         <label class="supdl-f">
           <span>Who are you?</span>
           <select id="supWho" aria-label="Who are you?">
-            <option value="">Everyone</option>
+            <option value="">(select)</option>
+            <option value="__all__">Everyone</option>
           </select>
         </label>
         <label class="supdl-f">
@@ -2473,7 +2475,7 @@ body.mc-mode .art{mix-blend-mode:normal;filter:none}
         <button class="btn btn-solid" id="supGo" type="button">Download</button>
         <span class="supdl-note" id="supNote"></span>
       </div>
-      <ol class="supcal" id="supCal"></ol>
+      <ol class="supcal" id="supCal" hidden></ol>
     </div>
 
     <div class="addrow">
@@ -2510,7 +2512,7 @@ body.mc-mode .art{mix-blend-mode:normal;filter:none}
       <li><b>Dating.</b> After a day-5 blastocyst transfer you are already 2 weeks 5 days pregnant.
         A positive test is week 4. The <b>due date is locked 39 weeks after that positive test</b>
         (273 days) as <b>ESTIMATED DUE DATE (39 weeks)</b> and will follow the test if the date
-        moves — that calculation cannot be edited on its own. Clinic 40-week dating (transfer + 261
+        moves â that calculation cannot be edited on its own. Clinic 40-week dating (transfer + 261
         days) stays on the list so nothing is hidden. The <b>week chip</b> on each row is gestational
         age from the transfer, which is what the OB uses.</li>
       <li><b>Prenatal cadence</b> is the full traditional one, nothing skipped: betas 48 hours apart,
@@ -2543,7 +2545,7 @@ body.mc-mode .art{mix-blend-mode:normal;filter:none}
       <span class="mc-kick">Mission Control</span>
       <h2>The sky, and the next thirty years of it</h2>
       <p>Where human spaceflight actually stands right now, plotted against one particular small
-        person's life. Dates in this business slip — everything below is tagged with how much to
+        person's life. Dates in this business slip â everything below is tagged with how much to
         trust it.</p>
       <div class="mc-refwrap">
         <button class="mc-refresh" id="mcRefresh" type="button">Refresh</button>
@@ -2552,9 +2554,9 @@ body.mc-mode .art{mix-blend-mode:normal;filter:none}
     </div>
 
     <div class="mc-panel">
-      <div class="mc-bar"><span class="mc-label" id="mcApodLabel">NASA · Astronomy Picture of the Day</span>
+      <div class="mc-bar"><span class="mc-label" id="mcApodLabel">NASA Â· Astronomy Picture of the Day</span>
         <span class="mc-stamp" id="mcApodDate"></span></div>
-      <div class="mc-apod" id="mcApod"><p class="mc-loading">Looking up today’s sky…</p></div>
+      <div class="mc-apod" id="mcApod"><p class="mc-loading">Looking up todayâs skyâ¦</p></div>
     </div>
 
     <div class="mc-panel">
@@ -2566,10 +2568,10 @@ body.mc-mode .art{mix-blend-mode:normal;filter:none}
         <p class="mc-note" id="mcEvNote"></p>
         <ol class="mc-ev" id="mcEvents"></ol>
         <p class="mc-src">Meteor peaks are the night either side of the date shown. Eclipse
-          dates are fixed, but whether you see anything depends entirely on where you stand —
+          dates are fixed, but whether you see anything depends entirely on where you stand â
           check a path map before making plans.
           <a class="mc-link" href="https://eclipse.gsfc.nasa.gov/eclipse.html" target="_blank"
-             rel="noopener">NASA eclipse catalogue ↗</a></p>
+             rel="noopener">NASA eclipse catalogue â</a></p>
       </div>
     </div>
 
@@ -2595,7 +2597,7 @@ body.mc-mode .art{mix-blend-mode:normal;filter:none}
 
     <div class="mc-panel">
       <div class="mc-bar">
-        <span class="mc-label">Moon and Mars · against one lifetime</span>
+        <span class="mc-label">Moon and Mars Â· against one lifetime</span>
         <span class="mc-stamp" id="mcUpdated"></span>
       </div>
       <div class="mc-body">
@@ -2658,11 +2660,11 @@ body.mc-mode .art{mix-blend-mode:normal;filter:none}
           <label class="fmf"><span>Title</span>
             <input id="fmBkTitle" type="text" maxlength="300" placeholder="The Little Prince"></label>
           <label class="fmf"><span>Author</span>
-            <input id="fmBkAuthor" type="text" maxlength="200" placeholder="Antoine de Saint-Exupéry"></label>
+            <input id="fmBkAuthor" type="text" maxlength="200" placeholder="Antoine de Saint-ExupÃ©ry"></label>
         </div>
         <label class="fmf"><span>Why it matters (optional)</span>
           <input id="fmBkNote" type="text" maxlength="4000" placeholder="Read it again when you are older."></label>
-        <p class="fmcoverhint">We’ll look up a cover picture from the title when you add it.</p>
+        <p class="fmcoverhint">Weâll look up a cover picture from the title when you add it.</p>
       </div>
       <div class="fmrow">
         <button class="fmbtn fmsolid" id="fmAddSave" type="button">Add to the collage</button>
@@ -2715,25 +2717,25 @@ body.mc-mode .art{mix-blend-mode:normal;filter:none}
     </div>
 
     <div class="lvbar">
-      <p class="lvprivacy">Your letters are stored privately and securely — only visible to family.</p>
+      <p class="lvprivacy">Your letters are stored privately and securely â only visible to family.</p>
       <button class="lvbtn" id="lvExport" type="button">Export all letters</button>
     </div>
   </div>
 
   <div id="pageEars" class="ears" hidden>
     <div class="ecard ehero">
-      <div class="enotes" aria-hidden="true">♪ ♫ ♩ ♬</div>
+      <div class="enotes" aria-hidden="true">âª â« â© â¬</div>
       <span class="ekicker">Little Ears</span>
       <h2>Baby can hear you before you ever meet</h2>
       <p class="elede">Hearing is the sense that arrives early. Somewhere in the middle of all this,
-        the person you are planning for starts listening — to your voice, your heartbeat, and whatever
+        the person you are planning for starts listening â to your voice, your heartbeat, and whatever
         you happen to be singing in the kitchen.</p>
       <div class="emiles" id="eMiles"></div>
     </div>
 
     <div class="ecard elul">
       <h3 class="eh">Lullabies of the world</h3>
-      <p class="esub">Fifty countries, fifty cradle songs. Pick one — then tap the card to turn it over.</p>
+      <p class="esub">Fifty countries, fifty cradle songs. Pick one â then tap the card to turn it over.</p>
 
       <div class="globewrap">
         <canvas id="lulGlobe" tabindex="0" role="img"
@@ -2766,7 +2768,7 @@ body.mc-mode .art{mix-blend-mode:normal;filter:none}
         their child, with a musician to help. It turns out you do not need to be a songwriter. You
         need a few honest lines.</p>
       <p class="wlink"><a href="https://www.carnegiehall.org/Education/Programs/Lullaby-Project"
-        target="_blank" rel="noopener">The Lullaby Project at Carnegie Hall ↗</a></p>
+        target="_blank" rel="noopener">The Lullaby Project at Carnegie Hall â</a></p>
 
       <div class="wprompt">
         <span class="wplabel">A place to start</span>
@@ -2786,16 +2788,16 @@ body.mc-mode .art{mix-blend-mode:normal;filter:none}
         <span class="wsaved" id="wSaved">Saved on this device</span>
         <span class="wcount" id="wCount"></span>
       </div>
-      <p class="wnote">This one stays in your browser — it is not shared with anyone else on the link.</p>
+      <p class="wnote">This one stays in your browser â it is not shared with anyone else on the link.</p>
     </div>
 
     <div class="ecard">
       <h3 class="eh">History of lullabies</h3>
-      <p class="esub">Four thousand years of singing babies toward sleep — and the instruments that went with the voice.</p>
+      <p class="esub">Four thousand years of singing babies toward sleep â and the instruments that went with the voice.</p>
 
 <details class="esec" open><summary><span class="ekick">Beginnings</span><span class="etitle">The oldest one we can still read</span></summary><div class="ebody">
 <p>The oldest lullaby anyone can still read was pressed into clay in Mesopotamia around four thousand
-years ago, written in Akkadian. Even then, someone was singing a baby toward sleep — a voice in the dark,
+years ago, written in Akkadian. Even then, someone was singing a baby toward sleep â a voice in the dark,
 trying to make the night feel smaller.</p>
 <p>That is the remarkable part. Across four millennia, the oldest surviving example of the form is
 immediately recognisable: an adult, awake in the middle of the night, offering sound as comfort.</p>
@@ -2803,14 +2805,14 @@ immediately recognisable: an adult, awake in the middle of the night, offering s
 anyone agrees on are bone flutes from caves in southern Germany, carved from vulture wing bone and
 mammoth ivory roughly forty thousand years ago. People were making tuned instruments tens of thousands
 of years before anyone kept a record of anything. Nobody can say when the first person hummed at an
-infant — only that it was a very long time before someone thought to write it down.</p>
+infant â only that it was a very long time before someone thought to write it down.</p>
 <p>By the classical world the habit was ordinary enough to be worth commenting on. Plato, in the
 <i>Laws</i>, noticed that nurses never simply put a baby down. They rocked it and sang at the same time,
 and he argued the motion and the sound were doing the same job.</p></div></details>
 
 <details class="esec"><summary><span class="ekick">Language</span><span class="etitle">Every language named it after the same sound</span></summary><div class="ebody">
 <p>The English word is two soothing noises stuck together. <b>Lull</b> comes from Middle English
-<i>lullen</i>, to quiet with sounds, and it is imitative — it is simply a written-down version of the
+<i>lullen</i>, to quiet with sounds, and it is imitative â it is simply a written-down version of the
 noise itself. <i>Lullaby</i> appears in English from the sixteenth century.</p>
 <p>The same thing happened independently almost everywhere else. Italian <b>ninna nanna</b>. Spanish
 <b>nana</b>. Turkish <b>ninni</b>. Russian <b>bayu</b>. Korean <b>jajang</b>. None of these are
@@ -2820,9 +2822,9 @@ that adults make at babies, and then using that sound as the name for the entire
 unrelated languages at once.</p></div></details>
 
 <details class="esec"><summary><span class="ekick">Instruments</span><span class="etitle">Music from every direction</span></summary><div class="ebody">
-<p>The same job — settling a baby — has been done with a voice alone, and with almost every instrument people have ever loved.</p>
+<p>The same job â settling a baby â has been done with a voice alone, and with almost every instrument people have ever loved.</p>
 <p>Bone flutes from caves in southern Germany are among the oldest tuned instruments we still have, carved from bird bone and ivory tens of thousands of years ago. Since then, cradle songs have travelled with koto and shamisen in Japan, mbira in southern Africa, harp and crwth in Wales, oud and qanun across the Levant, guitar and vihuela in Spain and Mexico, and a parent humming in the kitchen, which needs none of them.</p>
-<p>The scales differ. The instruments differ. What stays is the idea: sound as a kind of shelter. This page is a small atlas of that music — fifty cradle songs, and behind each one a culture’s way of making the night feel friendly.</p>
+<p>The scales differ. The instruments differ. What stays is the idea: sound as a kind of shelter. This page is a small atlas of that music â fifty cradle songs, and behind each one a cultureâs way of making the night feel friendly.</p>
 <p class="egood">You do not need to play anything. Listening together is already the lesson: the world is full of beautiful ways to begin.</p></div></details>
 
 <details class="esec"><summary><span class="ekick">Everywhere</span><span class="etitle">What stayed the same</span></summary><div class="ebody">
@@ -2831,14 +2833,14 @@ societies, and then measured them. Lullabies turned out to carry a signature you
 acoustically: slower, lower, breathier and rhythmically simpler than the same culture's other songs.</p>
 <p>They also ran it in the other direction. Given short clips from unfamiliar traditions, listeners who
 knew nothing whatsoever about the music could still pick out which songs were lullabies, well above
-chance. Later work played lullabies from entirely foreign traditions to infants and watched them relax —
-pupils narrowing, heart rate settling — to songs from cultures they had never once encountered.</p>
+chance. Later work played lullabies from entirely foreign traditions to infants and watched them relax â
+pupils narrowing, heart rate settling â to songs from cultures they had never once encountered.</p>
 <p class="egood">The words differ enormously. The scales differ. The instruments differ. The way a person
 sings a baby to sleep does not.</p></div></details>
 
 <details class="esec"><summary><span class="ekick">Now</span><span class="etitle">Lullabies people are writing today</span></summary><div class="ebody">
-<p>None of this is a museum piece. In 2011 Carnegie Hall began pairing pregnant women and new parents —
-starting with young mothers at a hospital in the Bronx — with professional musicians, and helping them
+<p>None of this is a museum piece. In 2011 Carnegie Hall began pairing pregnant women and new parents â
+starting with young mothers at a hospital in the Bronx â with professional musicians, and helping them
 write a lullaby for their own child. The parent brings the words. The musician helps with everything
 else. The song gets recorded, and the family keeps it.</p>
 <p>It has since spread to hospitals, shelters and community programmes in many more places. The
@@ -2851,11 +2853,11 @@ one. It is the one their own parent made for them.</p>
       <h3 class="eh">And what we know now</h3>
       <p class="esub">Three things worth knowing about babies and music.</p>
 <details class="esec"><summary><span class="ekick">Neuroscience</span><span class="etitle">What happens before they are born</span></summary><div class="ebody">
-<p>Hearing switches on somewhere around the third trimester — and by the time they arrive, they
+<p>Hearing switches on somewhere around the third trimester â and by the time they arrive, they
 already know your voice.</p>
 <p>A much-cited 2013 study in <i>PLOS ONE</i> played a specific melody repeatedly to fetuses, then
 measured EEG responses after birth. The exposed babies responded differently to that melody than
-unexposed babies did — genuine prenatal learning, not just a startle reflex. A 2023 paper in
+unexposed babies did â genuine prenatal learning, not just a startle reflex. A 2023 paper in
 <i>Developmental Science</i> went further, linking daily prenatal music to stronger neural encoding of
 the fundamental frequency of speech in newborns. In other words, music before birth may help lay the
 groundwork for processing speech sounds after it.</p>
@@ -2864,7 +2866,7 @@ they stay, and one day they will be the thing that settles a crying newborn fast
 in the room.</p></div></details><details class="esec"><summary><span class="ekick">Good news</span><span class="etitle">You do not have to buy anything</span></summary><div class="ebody">
 <p>Somewhere along the way an entire industry grew up around the idea that the right CD played at the
 right bump produces a cleverer baby. You can let that one go. Nobody needs a boxed set.</p>
-<p>What genuinely shows up in the research is <i>doing</i> music rather than being played at it — years
+<p>What genuinely shows up in the research is <i>doing</i> music rather than being played at it â years
 of singing, drumming on saucepans, and eventually learning an instrument if they want to. The active
 version is the one that matters, and it starts with the least expensive instrument in the house.</p>
 <p class="egood">Which is to say: your voice is the whole toolkit. Off-key is fine. Forgetting the
@@ -2872,8 +2874,8 @@ second verse and inventing a worse one is fine. You are already the best-soundin
 <p>This is the most evidence-dense corner of the whole subject, because the outcomes are measurable.</p>
 <p>A 2022 randomised trial in <i>Pediatrics</i> tested short-term music therapy for families with preterm
 infants. A <i>Journal of Perinatology</i> paper looked specifically at neonatal stress and pain. Systematic
-reviews have assessed whether live or recorded music measurably improves physiological stability —
-heart rate, oxygen saturation, feeding behaviour — in premature babies.</p>
+reviews have assessed whether live or recorded music measurably improves physiological stability â
+heart rate, oxygen saturation, feeding behaviour â in premature babies.</p>
 <p>The American Music Therapy Association publishes a plain-language fact sheet on NICU use with
 citations back to the primary studies, which is a good first stop if you ever need it.</p></div></details>
     </div>
@@ -2881,19 +2883,19 @@ citations back to the primary studies, which is a good first stop if you ever ne
     <div class="ecard">
       <h3 class="eh">Archives and recordings</h3>
       <p class="esub">Where the actual songs live, if you ever want to go listening.</p>
-      <ul class="elinks"><li><a href="https://www.mamalisa.com/" target="_blank" rel="noopener">Mama Lisa’s World</a><span>The loveliest thing on this list — children’s songs, lullabies and rhymes from all over, by country, usually with the original words and a translation</span></li><li><a href="https://www.carnegiehall.org/Education/Programs/Lullaby-Project" target="_blank" rel="noopener">Carnegie Hall Lullaby Project</a><span>The real programme behind the writing box above: parents and musicians co-writing lullabies, with recordings and stories</span></li><li><a href="https://playingforchange.com/" target="_blank" rel="noopener">Playing For Change</a><span>Songs Around the World — one song, played by street musicians across dozens of countries and stitched together</span></li><li><a href="https://theglobaljukebox.org/" target="_blank" rel="noopener">The Global Jukebox</a><span>Alan Lomax's cross-cultural database — about 5,700 songs coded across roughly 1,000 cultures, now public</span></li><li><a href="https://folkways.si.edu/" target="_blank" rel="noopener">Smithsonian Folkways</a><span>Enormous world and traditional music archive, with education resources built for exactly this kind of digging</span></li><li><a href="https://sounds.bl.uk/" target="_blank" rel="noopener">British Library Sounds</a><span>Around 80,000 free recordings, including field recordings of lullabies and children's songs</span></li><li><a href="https://zenodo.org/records/7265514" target="_blank" rel="noopener">Natural History of Song (Zenodo)</a><span>The actual public audio corpus behind the Harvard study — 14-second excerpts coded by song type and culture</span></li><li><a href="https://ehrafworldcultures.yale.edu/" target="_blank" rel="noopener">eHRAF World Cultures</a><span>Yale's structured ethnographic database; the lullaby-universality debate is built on this</span></li><li><a href="https://ich.unesco.org/en/lists" target="_blank" rel="noopener">UNESCO Intangible Heritage</a><span>Documented traditional music practices by culture, including many child-rearing traditions</span></li></ul>
+      <ul class="elinks"><li><a href="https://www.mamalisa.com/" target="_blank" rel="noopener">Mama Lisaâs World</a><span>The loveliest thing on this list â childrenâs songs, lullabies and rhymes from all over, by country, usually with the original words and a translation</span></li><li><a href="https://www.carnegiehall.org/Education/Programs/Lullaby-Project" target="_blank" rel="noopener">Carnegie Hall Lullaby Project</a><span>The real programme behind the writing box above: parents and musicians co-writing lullabies, with recordings and stories</span></li><li><a href="https://playingforchange.com/" target="_blank" rel="noopener">Playing For Change</a><span>Songs Around the World â one song, played by street musicians across dozens of countries and stitched together</span></li><li><a href="https://theglobaljukebox.org/" target="_blank" rel="noopener">The Global Jukebox</a><span>Alan Lomax's cross-cultural database â about 5,700 songs coded across roughly 1,000 cultures, now public</span></li><li><a href="https://folkways.si.edu/" target="_blank" rel="noopener">Smithsonian Folkways</a><span>Enormous world and traditional music archive, with education resources built for exactly this kind of digging</span></li><li><a href="https://sounds.bl.uk/" target="_blank" rel="noopener">British Library Sounds</a><span>Around 80,000 free recordings, including field recordings of lullabies and children's songs</span></li><li><a href="https://zenodo.org/records/7265514" target="_blank" rel="noopener">Natural History of Song (Zenodo)</a><span>The actual public audio corpus behind the Harvard study â 14-second excerpts coded by song type and culture</span></li><li><a href="https://ehrafworldcultures.yale.edu/" target="_blank" rel="noopener">eHRAF World Cultures</a><span>Yale's structured ethnographic database; the lullaby-universality debate is built on this</span></li><li><a href="https://ich.unesco.org/en/lists" target="_blank" rel="noopener">UNESCO Intangible Heritage</a><span>Documented traditional music practices by culture, including many child-rearing traditions</span></li></ul>
     </div>
 
     <div class="ecard">
       <h3 class="eh">If you want to read more</h3>
       <p class="esub">The actual studies behind the nice bits above.</p>
-      <ul class="elinks"><li><a href="https://pmc.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed / PMC</a><span>Free biomedical literature — the best entry point for the neuroscience and clinical studies above</span></li><li><a href="https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0078946" target="_blank" rel="noopener">Prenatal music exposure, PLOS ONE 2013</a><span>The EEG study showing genuine prenatal auditory learning</span></li><li><a href="https://onlinelibrary.wiley.com/doi/10.1111/desc.13362" target="_blank" rel="noopener">Prenatal music and newborn speech encoding</a><span>Developmental Science, linking daily prenatal music to speech-sound processing</span></li><li><a href="https://nyaspubs.onlinelibrary.wiley.com/doi/10.1111/nyas.70086" target="_blank" rel="noopener">Music training and cognition, ABCD study 2025</a><span>Longitudinal evidence for what actually holds up</span></li><li><a href="https://publications.aap.org/pediatrics/article/149/2/e2021052797/184394/Short-term-Music-Therapy-for-Families-With-Preterm" target="_blank" rel="noopener">Music therapy for preterm infants, Pediatrics 2022</a><span>Randomised trial in the NICU setting</span></li><li><a href="https://www.musictherapy.org/assets/1/7/FactSheet_Music_Therapy_and_the_Neonatal_Intensive_Care_Unit__2021.pdf" target="_blank" rel="noopener">AMTA NICU fact sheet</a><span>Plain-language clinical summary with citations</span></li></ul>
+      <ul class="elinks"><li><a href="https://pmc.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed / PMC</a><span>Free biomedical literature â the best entry point for the neuroscience and clinical studies above</span></li><li><a href="https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0078946" target="_blank" rel="noopener">Prenatal music exposure, PLOS ONE 2013</a><span>The EEG study showing genuine prenatal auditory learning</span></li><li><a href="https://onlinelibrary.wiley.com/doi/10.1111/desc.13362" target="_blank" rel="noopener">Prenatal music and newborn speech encoding</a><span>Developmental Science, linking daily prenatal music to speech-sound processing</span></li><li><a href="https://nyaspubs.onlinelibrary.wiley.com/doi/10.1111/nyas.70086" target="_blank" rel="noopener">Music training and cognition, ABCD study 2025</a><span>Longitudinal evidence for what actually holds up</span></li><li><a href="https://publications.aap.org/pediatrics/article/149/2/e2021052797/184394/Short-term-Music-Therapy-for-Families-With-Preterm" target="_blank" rel="noopener">Music therapy for preterm infants, Pediatrics 2022</a><span>Randomised trial in the NICU setting</span></li><li><a href="https://www.musictherapy.org/assets/1/7/FactSheet_Music_Therapy_and_the_Neonatal_Intensive_Care_Unit__2021.pdf" target="_blank" rel="noopener">AMTA NICU fact sheet</a><span>Plain-language clinical summary with citations</span></li></ul>
     </div>
 
     <div class="ecard">
       <h3 class="eh">For a rainy day</h3>
       <p class="esub">Open datasets, if you ever fancy poking at the numbers yourself.</p>
-      <ul class="elinks"><li><a href="https://osf.io/m7wzn/" target="_blank" rel="noopener">OSF — Music Cognition Lab</a><span>Preregistered studies, raw data and materials from an active research group</span></li><li><a href="https://github.com/tuomaseerola/MusicScienceData" target="_blank" rel="noopener">MusicScienceData</a><span>Datasets packaged for music-and-science research and teaching</span></li><li><a href="https://github.com/mdeff/fma" target="_blank" rel="noopener">FMA dataset</a><span>Large-scale audio and metadata — the one to use if you ever want to measure lullaby acoustics yourself</span></li><li><a href="https://gist.github.com/alexanderlerch/e3516bffc08ea77b429c419051ab793a" target="_blank" rel="noopener">MIR datasets list</a><span>Long-running, well-maintained index of music information retrieval datasets</span></li><li><a href="https://github.com/topics/music-dataset" target="_blank" rel="noopener">GitHub: music-dataset</a><span>Aggregated index of open music datasets</span></li></ul>
+      <ul class="elinks"><li><a href="https://osf.io/m7wzn/" target="_blank" rel="noopener">OSF â Music Cognition Lab</a><span>Preregistered studies, raw data and materials from an active research group</span></li><li><a href="https://github.com/tuomaseerola/MusicScienceData" target="_blank" rel="noopener">MusicScienceData</a><span>Datasets packaged for music-and-science research and teaching</span></li><li><a href="https://github.com/mdeff/fma" target="_blank" rel="noopener">FMA dataset</a><span>Large-scale audio and metadata â the one to use if you ever want to measure lullaby acoustics yourself</span></li><li><a href="https://gist.github.com/alexanderlerch/e3516bffc08ea77b429c419051ab793a" target="_blank" rel="noopener">MIR datasets list</a><span>Long-running, well-maintained index of music information retrieval datasets</span></li><li><a href="https://github.com/topics/music-dataset" target="_blank" rel="noopener">GitHub: music-dataset</a><span>Aggregated index of open music datasets</span></li></ul>
     </div>
 
     <p class="efoot">Put together August 2026, with love and a lot of tabs open.</p>
@@ -2907,10 +2909,10 @@ citations back to the primary studies, which is a good first stop if you ever ne
       <button type="button" class="bnotpreg-go" id="bGoChart">Open Timeline</button>
     </div>
     <div class="bcard bsetup" id="bumpSetup" hidden>
-      <div class="bsetup-emoji">🍼</div>
+      <div class="bsetup-emoji">ð¼</div>
       <h2>When is the little one due?</h2>
       <p>Pop the due date in and this page will work out where you are, week by week.
-         It stays on this device — nothing to sign into.</p>
+         It stays on this device â nothing to sign into.</p>
       <div class="bsetup-row">
         <span class="dtwrap">
           <input class="dt" id="bumpDue" type="text" inputmode="numeric"
@@ -2928,13 +2930,13 @@ citations back to the primary studies, which is a good first stop if you ever ne
           <span class="btrim" id="bTrim">Second trimester</span>
           <span class="bwk" id="bWkLabel">Week 19</span>
         </div>
-        <div class="bemoji" id="bEmoji">🥭</div>
+        <div class="bemoji" id="bEmoji">ð¥­</div>
         <h2 class="bsize" id="bSize">Your baby is about the size of a mango</h2>
         <p class="bwhen" id="bWhen"></p>
         <div class="bstats">
-          <div class="bstat"><span>Length</span><b id="bLen">—</b></div>
-          <div class="bstat"><span>Weight</span><b id="bWt">—</b></div>
-          <div class="bstat"><span>To go</span><b id="bToGo">—</b></div>
+          <div class="bstat"><span>Length</span><b id="bLen">â</b></div>
+          <div class="bstat"><span>Weight</span><b id="bWt">â</b></div>
+          <div class="bstat"><span>To go</span><b id="bToGo">â</b></div>
         </div>
         <div class="bprog">
           <div class="bprog-track">
@@ -2955,10 +2957,10 @@ citations back to the primary studies, which is a good first stop if you ever ne
       <div class="bcard bstar" id="bStarCard">
         <div class="bstar-sky" aria-hidden="true"></div>
         <div class="bstar-in">
-          <div class="bstar-glyph" id="bStarGlyph">♌</div>
+          <div class="bstar-glyph" id="bStarGlyph">â</div>
           <div class="bstar-txt">
             <span class="bstar-kicker" id="bStarKicker">Probably a</span>
-            <h3 id="bStarName">Leo <span id="bStarEmoji">🦁</span></h3>
+            <h3 id="bStarName">Leo <span id="bStarEmoji">ð¦</span></h3>
             <p class="bstar-dates" id="bStarDates"></p>
             <p class="bstar-traits" id="bStarTraits"></p>
             <p class="bstar-cusp" id="bStarCusp"></p>
@@ -2973,15 +2975,15 @@ citations back to the primary studies, which is a good first stop if you ever ne
       </div>
 
       <div class="bnav">
-        <button class="bbtn" id="bPrev" aria-label="Previous week">←</button>
+        <button class="bbtn" id="bPrev" aria-label="Previous week">â</button>
         <select class="bsel" id="bPick" aria-label="Choose a week"></select>
-        <button class="bbtn" id="bNext" aria-label="Next week">→</button>
+        <button class="bbtn" id="bNext" aria-label="Next week">â</button>
         <button class="btn bnow" id="bNow">Back to this week</button>
       </div>
 
       <p class="bfoot">
         <span id="bDueSrc"></span>
-        Sizes and weights are the usual published averages — every baby grows at their own pace,
+        Sizes and weights are the usual published averages â every baby grows at their own pace,
         so treat them as a bit of fun rather than a measurement.
         <button class="blink" id="bChange" hidden>Change due date</button>
         <span class="bduelock">Locked 39 weeks after the first beta</span>
@@ -3014,7 +3016,7 @@ citations back to the primary studies, which is a good first stop if you ever ne
 
   <div class="utilbar">
     <button class="ubtn" id="undoBtn" disabled>Undo</button>
-    <span class="udot">·</span>
+    <span class="udot">Â·</span>
     <button class="ubtn" id="histBtn">History</button>
   </div>
 </div>
@@ -3026,8 +3028,8 @@ citations back to the primary studies, which is a good first stop if you ever ne
       <h2>PNWF IVF calendar</h2>
       <button class="btn" id="pdfClose">Close</button>
     </div>
-    <div class="sheet-body"><div class="cal-wrap"><p class="cal-lede">Additional appointments will be scheduled one by one as needed during the cycle, based on ultrasound and blood results.</p><table class="cal"><thead><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr></thead><tbody><tr><td><span class="cd-date">16-Aug</span></td><td><span class="cd-date">17-Aug</span></td><td><span class="cd-date">18-Aug</span></td><td><span class="cd-date">19-Aug</span></td><td><span class="cd-date">20-Aug</span></td><td><span class="cd-date">21-Aug</span><b>Start BC pills</b><span>In the evening (ACTIVE pills only)</span></td><td><span class="cd-date">22-Aug</span><span>BC pill</span></td></tr><tr><td><span class="cd-date">23-Aug</span><span>BC pill</span></td><td><span class="cd-date">24-Aug</span><span>BC pill</span></td><td><span class="cd-date">25-Aug</span><span>BC pill</span></td><td><span class="cd-date">26-Aug</span><span>BC pill</span></td><td><span class="cd-date">27-Aug</span><span>BC pill</span></td><td><span class="cd-date">28-Aug</span><span>BC pill</span></td><td><span class="cd-date">29-Aug</span><span>BC pill</span></td></tr><tr><td><span class="cd-date">30-Aug</span><span>BC pill</span></td><td><span class="cd-date">31-Aug</span><span>BC pill</span></td><td><span class="cd-date">1-Sep</span><span>BC pill</span></td><td><span class="cd-date">2-Sep</span><span>BC pill</span></td><td><span class="cd-date">3-Sep</span><span>BC pill</span></td><td><span class="cd-date">4-Sep</span><span>BC pill</span></td><td><span class="cd-date">5-Sep</span><span>BC pill</span></td></tr><tr><td><span class="cd-date">6-Sep</span><span>BC pill</span></td><td><span class="cd-date">7-Sep</span><b>Last BC pill</b><span>You may or may not have a bleed when stopping pills.</span></td><td><span class="cd-date">8-Sep</span></td><td><span class="cd-date">9-Sep</span></td><td><span class="cd-date">10-Sep</span><b>Suppression check</b><span>Ultrasound and blood work (AM). Pending results — start stimulation medications:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">11-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">12-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td></tr><tr><td><span class="cd-date">13-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">14-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">15-Sep</span><b>Day 6: ultrasound and blood work (AM)</b><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">16-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">17-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">18-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">19-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td></tr><tr><td><span class="cd-date">20-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM) — last dose is night of trigger</span></td><td><span class="cd-date">21-Sep</span></td><td><span class="cd-date">22-Sep</span><b class="cd-star">***Approximate day of retrieval</b></td><td><span class="cd-date">23-Sep</span><b>Fertilization update</b></td><td><span class="cd-date">24-Sep</span></td><td><span class="cd-date">25-Sep</span><b>Day 3</b><span>Call if you have any questions or concerns regarding your recovery.</span></td><td><span class="cd-date">26-Sep</span></td></tr><tr><td><span class="cd-date">27-Sep</span></td><td><span class="cd-date">28-Sep</span><b>Day 5–7 embryo update</b><span>Embryos are biopsied for genetic testing and frozen on day 5–7. You will get an update once embryo development is complete.</span></td><td><span class="cd-date">29-Sep</span></td><td><span class="cd-date">30-Sep</span></td><td><span class="cd-date">1-Oct</span></td><td><span class="cd-date">2-Oct</span></td><td><span class="cd-date">3-Oct</span></td></tr></tbody></table><ul class="cal-notes"><li>For patients choosing PGT testing, embryos are biopsied (then frozen) and the sample is sent to Sequence46. Results usually take 2–3 weeks.</li><li>PNWF operates under a team model, allowing procedures nearly every day of the year. Your primary MD will likely not be your day-of-procedure MD.</li><li>Take a urine home pregnancy test to confirm it is negative before starting injections.</li><li><b>Doses may change after each ultrasound visit.</b></li><li>Questions: <b>(206) 515-0000</b></li></ul></div></div>
-    <div class="sheet-note">Transcribed from the calendar PNWF issued on 20 August 2026. Where this and the timeline disagree, this wins — tell me and I will correct the timeline.</div>
+    <div class="sheet-body"><div class="cal-wrap"><p class="cal-lede">Additional appointments will be scheduled one by one as needed during the cycle, based on ultrasound and blood results.</p><table class="cal"><thead><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr></thead><tbody><tr><td><span class="cd-date">16-Aug</span></td><td><span class="cd-date">17-Aug</span></td><td><span class="cd-date">18-Aug</span></td><td><span class="cd-date">19-Aug</span></td><td><span class="cd-date">20-Aug</span></td><td><span class="cd-date">21-Aug</span><b>Start BC pills</b><span>In the evening (ACTIVE pills only)</span></td><td><span class="cd-date">22-Aug</span><span>BC pill</span></td></tr><tr><td><span class="cd-date">23-Aug</span><span>BC pill</span></td><td><span class="cd-date">24-Aug</span><span>BC pill</span></td><td><span class="cd-date">25-Aug</span><span>BC pill</span></td><td><span class="cd-date">26-Aug</span><span>BC pill</span></td><td><span class="cd-date">27-Aug</span><span>BC pill</span></td><td><span class="cd-date">28-Aug</span><span>BC pill</span></td><td><span class="cd-date">29-Aug</span><span>BC pill</span></td></tr><tr><td><span class="cd-date">30-Aug</span><span>BC pill</span></td><td><span class="cd-date">31-Aug</span><span>BC pill</span></td><td><span class="cd-date">1-Sep</span><span>BC pill</span></td><td><span class="cd-date">2-Sep</span><span>BC pill</span></td><td><span class="cd-date">3-Sep</span><span>BC pill</span></td><td><span class="cd-date">4-Sep</span><span>BC pill</span></td><td><span class="cd-date">5-Sep</span><span>BC pill</span></td></tr><tr><td><span class="cd-date">6-Sep</span><span>BC pill</span></td><td><span class="cd-date">7-Sep</span><b>Last BC pill</b><span>You may or may not have a bleed when stopping pills.</span></td><td><span class="cd-date">8-Sep</span></td><td><span class="cd-date">9-Sep</span></td><td><span class="cd-date">10-Sep</span><b>Suppression check</b><span>Ultrasound and blood work (AM). Pending results â start stimulation medications:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">11-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">12-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td></tr><tr><td><span class="cd-date">13-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">14-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">15-Sep</span><b>Day 6: ultrasound and blood work (AM)</b><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">16-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">17-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">18-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td><td><span class="cd-date">19-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM)</span><span class="cd-med">FSH 300 IU (PM)</span><span class="cd-med">Menopur 150 IU (PM)</span></td></tr><tr><td><span class="cd-date">20-Sep</span><span>Meds:</span><span class="cd-med">Provera 10 mg (PM) â last dose is night of trigger</span></td><td><span class="cd-date">21-Sep</span></td><td><span class="cd-date">22-Sep</span><b class="cd-star">***Approximate day of retrieval</b></td><td><span class="cd-date">23-Sep</span><b>Fertilization update</b></td><td><span class="cd-date">24-Sep</span></td><td><span class="cd-date">25-Sep</span><b>Day 3</b><span>Call if you have any questions or concerns regarding your recovery.</span></td><td><span class="cd-date">26-Sep</span></td></tr><tr><td><span class="cd-date">27-Sep</span></td><td><span class="cd-date">28-Sep</span><b>Day 5â7 embryo update</b><span>Embryos are biopsied for genetic testing and frozen on day 5â7. You will get an update once embryo development is complete.</span></td><td><span class="cd-date">29-Sep</span></td><td><span class="cd-date">30-Sep</span></td><td><span class="cd-date">1-Oct</span></td><td><span class="cd-date">2-Oct</span></td><td><span class="cd-date">3-Oct</span></td></tr></tbody></table><ul class="cal-notes"><li>For patients choosing PGT testing, embryos are biopsied (then frozen) and the sample is sent to Sequence46. Results usually take 2â3 weeks.</li><li>PNWF operates under a team model, allowing procedures nearly every day of the year. Your primary MD will likely not be your day-of-procedure MD.</li><li>Take a urine home pregnancy test to confirm it is negative before starting injections.</li><li><b>Doses may change after each ultrasound visit.</b></li><li>Questions: <b>(206) 515-0000</b></li></ul></div></div>
+    <div class="sheet-note">Transcribed from the calendar PNWF issued on 20 August 2026. Where this and the timeline disagree, this wins â tell me and I will correct the timeline.</div>
   </div>
 </div>
 
@@ -3094,7 +3096,7 @@ var PHASES = {
    gestational age in days = offset - 84 + 19, i.e. offset - 65. Prenatal appointments
    are placed on that clock (the one the OB uses). The due date is a locked calculation:
    always 39 weeks (273 days) after Pregnancy test (first beta hCG). That date cannot
-   be edited on its own — move the test and the due date follows.
+   be edited on its own â move the test and the due date follows.
 
    Sequence order is the source of truth. Starts must never decrease down this list. */
 var PLAN = [
@@ -3157,7 +3159,7 @@ var EMBRYO_AGE_DAYS = 5;      /* day-5 blastocyst; change if the lab report says
    age on transfer day is embryo age + 14. A day-5 blast puts you at 2w5d. */
 var GA_AT_TRANSFER  = EMBRYO_AGE_DAYS + 14;
 /* Family due date: always 39 weeks (273 days) after the first positive pregnancy test.
-   Locked — the date and the label cannot be edited independently of the test. */
+   Locked â the date and the label cannot be edited independently of the test. */
 var DAYS_TEST_TO_DUE = 39 * 7;
 var DUE_LABEL = "ESTIMATED DUE DATE (39 weeks)";
 
@@ -3384,7 +3386,7 @@ function load(){
 function noStoreWarn(){
   document.getElementById("fine").textContent =
     "This browser is blocking local storage, so the offline copy is off. Edits still save to the " +
-    "shared timeline as long as you have signal. The address is the key — only send it to people " +
+    "shared timeline as long as you have signal. The address is the key â only send it to people " +
     "you want reading and editing your dates.";
 }
 
@@ -3789,7 +3791,7 @@ function renderAgenda(c){
                    : (s.moved ? '<span class="cd cd-wait">Confirm the date</span>'
                               : '<span class="cd">' + cdLabel(s.start) + '</span>')) +
           (ga ? '<span class="ga" title="Gestational age">' + ga + '</span>' : '') +
-          (dueLock ? '<span class="lockchip" title="Always 39 weeks (273 days) after Pregnancy test (first beta hCG)">Locked · 39 weeks after first beta</span>' : "") +
+          (dueLock ? '<span class="lockchip" title="Always 39 weeks (273 days) after Pregnancy test (first beta hCG)">Locked Â· 39 weeks after first beta</span>' : "") +
           (clashes[s.id] ? '<span class="clashwarn" title="This appointment falls inside a vacation">' +
             'Clashes with ' + esc(clashes[s.id].label) + '</span>' : '') +
           (dueLock ? "" : ('<label class="apptbox' + (s.appt ? " on" : "") + '" title="A booked appointment: ' +
@@ -3804,7 +3806,7 @@ function renderAgenda(c){
           '<input class="dt" data-act="date" type="text" inputmode="numeric" ' +
             'placeholder="MM/DD/YYYY" autocomplete="off" aria-label="Date for ' + esc(s.label) + '"' +
             (dueLock ? ' readonly aria-readonly="true"' : "") + ">" +
-          (dueLock ? "" : '<button class="savebtn" data-save="1" title="Save date" aria-label="Save date">✓</button>') +
+          (dueLock ? "" : '<button class="savebtn" data-save="1" title="Save date" aria-label="Save date">â</button>') +
         '</span>' +
         '<span class="wd">' + (waiting ? "" : WD[date.getDay()].slice(0,3)) + '</span>' +
       '</div>' +
@@ -3820,7 +3822,7 @@ function renderAgenda(c){
       (dueLock
         ? '<span class="del" aria-hidden="true"></span>'
         : '<button class="del" data-act="del" title="Remove step" aria-label="Remove ' +
-          esc(s.label) + '">×</button>');
+          esc(s.label) + '">Ã</button>');
 
     var pick = r.querySelector(".phasepick");
     if(pick) pick.style.setProperty("--seg", (PHASES[s.phase] || PHASES.prep).color);
@@ -3831,7 +3833,7 @@ function renderAgenda(c){
     if(showNote){
       var ta = document.createElement("textarea");
       ta.className = "note"; ta.dataset.act = "note";
-      ta.placeholder = "Follicle counts, dosages, clinic instructions…";
+      ta.placeholder = "Follicle counts, dosages, clinic instructionsâ¦";
       ta.value = s.note || "";
       r.appendChild(ta);
     }
@@ -4358,7 +4360,7 @@ checkHash();
 /* ---------------- shared sync ----------------
    One timeline on the server; every viewer of this URL reads and writes the same row.
    Local storage stays on as an offline cache. Last edit wins, and a poll pulls in
-   other people's changes — deferred while you are actually typing so nothing is
+   other people's changes â deferred while you are actually typing so nothing is
    yanked out from under the cursor. */
 
 var API = "api/state";
@@ -4418,7 +4420,7 @@ function pushNow(){
       lastSeenT = res.t;
       setSync("ok", "Shared");
       /* your copy won a race; the other person will see yours on their next refresh */
-      if(res.stale) toast("Someone edited at the same time — your version is the one saved");
+      if(res.stale) toast("Someone edited at the same time â your version is the one saved");
     })
     .catch(function(){
       pushPending = false;
@@ -4689,7 +4691,7 @@ function tipIsOpenFor(g){
     if(movedStep && !movedStep.pending) movedStep.moved = true;
     normalize(c);
     save(); render();
-    toast("Moved — set its date to confirm");
+    toast("Moved â set its date to confirm");
   }
 
   agenda.addEventListener("pointerdown", function(e){
@@ -4940,46 +4942,46 @@ window.addEventListener("resize", function(){
 
 /* ---------------- The Bump Report ---------------- */
 var BUMP=[
-[1,"🌙","a brand new moon",null,null,["You are not actually pregnant yet — week 1 is counted from your last period.","Doctors count from here because it is the one date most people can pin down."]],
-[2,"✨","a wish",null,null,["Ovulation happens around the end of this week.","One egg is getting ready for the big day."]],
-[3,"🔬","a grain of salt",0.01,null,["Fertilisation! Sperm meets egg and a tiny ball of cells begins dividing.","The whole genetic recipe — eyes, hair, dimples — is already written."]],
-[4,"🌱","a poppy seed",0.1,null,["The ball of cells burrows into the uterine wall and settles in.","A pregnancy test could just about pick this up now.","Three layers form that become skin, organs and bones."]],
-[5,"🫘","a sesame seed",0.2,null,["The neural tube — future brain and spinal cord — is closing.","A tiny heart tube starts to pulse this week.","Officially an embryo now."]],
-[6,"🌰","a lentil",0.4,null,["That heartbeat is often visible on an early scan.","Dark spots appear where the eyes will be.","Little buds are forming that become arms and legs."]],
-[7,"🫐","a blueberry",1.0,1,["The brain is growing at a staggering pace — roughly 100 cells a minute.","Nostrils appear.","Paddle-like hands are taking shape."]],
-[8,"🍇","a raspberry",1.6,1,["Fingers and toes are webbed but there.","The tail is gone. Officially.","Baby is already moving, far too small for you to feel it."]],
-[9,"🍒","a cherry",2.3,2,["Tiny earlobes are forming.","All the essential organs are present and starting work.","Muscles are developing — the first twitches happen."]],
-[10,"🫒","a kumquat",3.1,4,["Graduated from embryo to fetus this week.","Fingernails and hair are starting.","The stomach is producing digestive juices already."]],
-[11,"🍈","a fig",4.1,7,["Baby is practising kicking and stretching.","Tooth buds are forming under the gums.","Hands will soon open and close into little fists."]],
-[12,"🍋‍🟩","a lime",5.4,14,["Reflexes arrive — poke the bump and baby may squirm.","The digestive system is practising contractions.","Fingerprints are forming. Nobody else will ever have them."]],
-[13,"🫛","a pea pod",7.4,23,["Vocal cords are forming.","Baby's own fingerprints are now complete.","Last week of the first trimester — the hardest part is often behind you."]],
-[14,"🍋","a lemon",8.7,43,["Baby can squint, frown and grimace — full facial expressions.","Soft downy hair called lanugo covers the body.","The liver and spleen get to work."]],
-[15,"🍎","an apple",10.1,70,["Baby can sense light through closed eyelids.","Taste buds are forming.","Legs have outgrown the arms at last."]],
-[16,"🥑","an avocado",11.6,100,["Baby's heart pumps around 25 litres of blood a day.","The scalp pattern is set, though hair is still to come.","Eyes are working — they can move slowly side to side."]],
-[17,"🍐","a pear",13.0,140,["The skeleton is turning from soft cartilage to bone.","Fat stores start forming to keep baby warm.","Baby has learned to hiccup. You may feel it later."]],
-[18,"🫑","a bell pepper",14.2,190,["Ears move into their final position and stand out from the head.","Baby can hear now — voices, heartbeat, digestion.","Yawning and stretching become a habit."]],
-[19,"🥭","a mango",15.3,240,["A waxy coating called vernix forms to protect the skin.","The brain is mapping out senses: smell, taste, hearing, sight, touch.","Many people feel the first flutters right about now."]],
-[20,"🍌","a banana",25.6,300,["Halfway there. 🎉","Baby is producing meconium — the first nappy is being prepared.","If you have an anatomy scan, this is usually the week."]],
-[21,"🥕","a carrot",26.7,360,["Baby swallows amniotic fluid daily, practising for milk.","Arms and legs are finally in proportion.","Movements go from flutters to proper kicks."]],
-[22,"🎃","a spaghetti squash",27.8,430,["Lips, eyebrows and eyelids are more distinct.","Tiny tooth buds are developing beneath the gums.","Baby's grip is strong enough to tug the umbilical cord."]],
-[23,"🍊","a grapefruit",28.9,501,["Baby can hear loud noises outside and may startle.","Skin is still translucent but starting to fill out.","Blood vessels in the lungs are developing for that first breath."]],
-[24,"🌽","an ear of corn",30.0,600,["Baby's face is almost fully formed, lashes and all.","The inner ear is complete — baby now knows which way is up.","A big viability milestone this week."]],
-[25,"🥬","a cauliflower",34.6,660,["Hair is growing and has actual colour and texture.","Hands are fully developed, with working fingers.","Baby responds to your voice with movement."]],
-[26,"🥬","a head of lettuce",35.6,760,["Eyes open for the first time.","Baby is inhaling and exhaling amniotic fluid to practise breathing.","Brain wave activity for hearing and sight switches on."]],
-[27,"🥦","a rutabaga",36.6,875,["Baby now has regular sleeping and waking cycles.","Hiccups are frequent and you will definitely notice.","Last week of the second trimester."]],
-[28,"🍆","an aubergine",37.6,1005,["Baby can dream — REM sleep begins.","Eyelashes have arrived.","Blinking is now a thing."]],
-[29,"🥥","a butternut squash",38.6,1153,["Bones are soaking up calcium fast — about 250mg a day.","Muscles and lungs are busy maturing.","Kicks get strong enough to be visible from outside."]],
-[30,"🥬","a cabbage",39.9,1319,["Baby can now regulate their own body temperature a little.","Around half a litre of amniotic fluid surrounds them.","The soft lanugo hair starts to disappear."]],
-[31,"🥥","a coconut",41.1,1502,["All five senses are working.","Baby can turn their head from side to side.","Rapid weight gain begins from here on."]],
-[32,"🥔","a jicama",42.4,1702,["Toenails have finished growing.","Baby may have settled head-down ready for the exit.","Practising sucking and swallowing in earnest."]],
-[33,"🍍","a pineapple",43.7,1918,["The skull bones stay soft and separate to make delivery easier.","Baby's own immune system is coming online.","They can tell light from dark now."]],
-[34,"🍈","a cantaloupe",45.0,2146,["Fingernails reach the fingertips.","The waxy vernix coating thickens up.","Baby's central nervous system and lungs are maturing fast."]],
-[35,"🍯","a honeydew melon",46.2,2383,["Most of the basic development is done — from here it is mostly growing.","Baby's kidneys are fully developed.","It is getting cosy in there; movements feel more like squirms."]],
-[36,"🥬","a head of romaine",47.4,2622,["Baby is likely head-down and settling into position.","The digestive system is ready but has not been used yet.","Considered early term from next week."]],
-[37,"🌿","a bunch of swiss chard",48.6,2859,["Baby is practising for the outside: breathing, sucking, blinking, gripping.","Firmer grip strength — ready to hold your finger.","Officially early term."]],
-[38,"🥬","a leek",49.8,3083,["The lanugo and most of the vernix have gone.","Baby's organs are ready for the world.","Eye colour is set, though it may still change after birth."]],
-[39,"🍉","a small watermelon",50.7,3288,["Full term. Baby is ready whenever they decide.","The brain is still growing rapidly and will keep going for years.","Baby is shedding the last of the protective coating."]],
-[40,"🎃","a small pumpkin",51.2,3462,["Due date! Only about 1 in 20 babies actually arrive today.","Baby's head may have dropped ready for the off.","Everything is finished. Now it is just waiting."]]
+[1,"ð","a brand new moon",null,null,["You are not actually pregnant yet â week 1 is counted from your last period.","Doctors count from here because it is the one date most people can pin down."]],
+[2,"â¨","a wish",null,null,["Ovulation happens around the end of this week.","One egg is getting ready for the big day."]],
+[3,"ð¬","a grain of salt",0.01,null,["Fertilisation! Sperm meets egg and a tiny ball of cells begins dividing.","The whole genetic recipe â eyes, hair, dimples â is already written."]],
+[4,"ð±","a poppy seed",0.1,null,["The ball of cells burrows into the uterine wall and settles in.","A pregnancy test could just about pick this up now.","Three layers form that become skin, organs and bones."]],
+[5,"ð«","a sesame seed",0.2,null,["The neural tube â future brain and spinal cord â is closing.","A tiny heart tube starts to pulse this week.","Officially an embryo now."]],
+[6,"ð°","a lentil",0.4,null,["That heartbeat is often visible on an early scan.","Dark spots appear where the eyes will be.","Little buds are forming that become arms and legs."]],
+[7,"ð«","a blueberry",1.0,1,["The brain is growing at a staggering pace â roughly 100 cells a minute.","Nostrils appear.","Paddle-like hands are taking shape."]],
+[8,"ð","a raspberry",1.6,1,["Fingers and toes are webbed but there.","The tail is gone. Officially.","Baby is already moving, far too small for you to feel it."]],
+[9,"ð","a cherry",2.3,2,["Tiny earlobes are forming.","All the essential organs are present and starting work.","Muscles are developing â the first twitches happen."]],
+[10,"ð«","a kumquat",3.1,4,["Graduated from embryo to fetus this week.","Fingernails and hair are starting.","The stomach is producing digestive juices already."]],
+[11,"ð","a fig",4.1,7,["Baby is practising kicking and stretching.","Tooth buds are forming under the gums.","Hands will soon open and close into little fists."]],
+[12,"ðâð©","a lime",5.4,14,["Reflexes arrive â poke the bump and baby may squirm.","The digestive system is practising contractions.","Fingerprints are forming. Nobody else will ever have them."]],
+[13,"ð«","a pea pod",7.4,23,["Vocal cords are forming.","Baby's own fingerprints are now complete.","Last week of the first trimester â the hardest part is often behind you."]],
+[14,"ð","a lemon",8.7,43,["Baby can squint, frown and grimace â full facial expressions.","Soft downy hair called lanugo covers the body.","The liver and spleen get to work."]],
+[15,"ð","an apple",10.1,70,["Baby can sense light through closed eyelids.","Taste buds are forming.","Legs have outgrown the arms at last."]],
+[16,"ð¥","an avocado",11.6,100,["Baby's heart pumps around 25 litres of blood a day.","The scalp pattern is set, though hair is still to come.","Eyes are working â they can move slowly side to side."]],
+[17,"ð","a pear",13.0,140,["The skeleton is turning from soft cartilage to bone.","Fat stores start forming to keep baby warm.","Baby has learned to hiccup. You may feel it later."]],
+[18,"ð«","a bell pepper",14.2,190,["Ears move into their final position and stand out from the head.","Baby can hear now â voices, heartbeat, digestion.","Yawning and stretching become a habit."]],
+[19,"ð¥­","a mango",15.3,240,["A waxy coating called vernix forms to protect the skin.","The brain is mapping out senses: smell, taste, hearing, sight, touch.","Many people feel the first flutters right about now."]],
+[20,"ð","a banana",25.6,300,["Halfway there. ð","Baby is producing meconium â the first nappy is being prepared.","If you have an anatomy scan, this is usually the week."]],
+[21,"ð¥","a carrot",26.7,360,["Baby swallows amniotic fluid daily, practising for milk.","Arms and legs are finally in proportion.","Movements go from flutters to proper kicks."]],
+[22,"ð","a spaghetti squash",27.8,430,["Lips, eyebrows and eyelids are more distinct.","Tiny tooth buds are developing beneath the gums.","Baby's grip is strong enough to tug the umbilical cord."]],
+[23,"ð","a grapefruit",28.9,501,["Baby can hear loud noises outside and may startle.","Skin is still translucent but starting to fill out.","Blood vessels in the lungs are developing for that first breath."]],
+[24,"ð½","an ear of corn",30.0,600,["Baby's face is almost fully formed, lashes and all.","The inner ear is complete â baby now knows which way is up.","A big viability milestone this week."]],
+[25,"ð¥¬","a cauliflower",34.6,660,["Hair is growing and has actual colour and texture.","Hands are fully developed, with working fingers.","Baby responds to your voice with movement."]],
+[26,"ð¥¬","a head of lettuce",35.6,760,["Eyes open for the first time.","Baby is inhaling and exhaling amniotic fluid to practise breathing.","Brain wave activity for hearing and sight switches on."]],
+[27,"ð¥¦","a rutabaga",36.6,875,["Baby now has regular sleeping and waking cycles.","Hiccups are frequent and you will definitely notice.","Last week of the second trimester."]],
+[28,"ð","an aubergine",37.6,1005,["Baby can dream â REM sleep begins.","Eyelashes have arrived.","Blinking is now a thing."]],
+[29,"ð¥¥","a butternut squash",38.6,1153,["Bones are soaking up calcium fast â about 250mg a day.","Muscles and lungs are busy maturing.","Kicks get strong enough to be visible from outside."]],
+[30,"ð¥¬","a cabbage",39.9,1319,["Baby can now regulate their own body temperature a little.","Around half a litre of amniotic fluid surrounds them.","The soft lanugo hair starts to disappear."]],
+[31,"ð¥¥","a coconut",41.1,1502,["All five senses are working.","Baby can turn their head from side to side.","Rapid weight gain begins from here on."]],
+[32,"ð¥","a jicama",42.4,1702,["Toenails have finished growing.","Baby may have settled head-down ready for the exit.","Practising sucking and swallowing in earnest."]],
+[33,"ð","a pineapple",43.7,1918,["The skull bones stay soft and separate to make delivery easier.","Baby's own immune system is coming online.","They can tell light from dark now."]],
+[34,"ð","a cantaloupe",45.0,2146,["Fingernails reach the fingertips.","The waxy vernix coating thickens up.","Baby's central nervous system and lungs are maturing fast."]],
+[35,"ð¯","a honeydew melon",46.2,2383,["Most of the basic development is done â from here it is mostly growing.","Baby's kidneys are fully developed.","It is getting cosy in there; movements feel more like squirms."]],
+[36,"ð¥¬","a head of romaine",47.4,2622,["Baby is likely head-down and settling into position.","The digestive system is ready but has not been used yet.","Considered early term from next week."]],
+[37,"ð¿","a bunch of swiss chard",48.6,2859,["Baby is practising for the outside: breathing, sucking, blinking, gripping.","Firmer grip strength â ready to hold your finger.","Officially early term."]],
+[38,"ð¥¬","a leek",49.8,3083,["The lanugo and most of the vernix have gone.","Baby's organs are ready for the world.","Eye colour is set, though it may still change after birth."]],
+[39,"ð","a small watermelon",50.7,3288,["Full term. Baby is ready whenever they decide.","The brain is still growing rapidly and will keep going for years.","Baby is shedding the last of the protective coating."]],
+[40,"ð","a small pumpkin",51.2,3462,["Due date! Only about 1 in 20 babies actually arrive today.","Baby's head may have dropped ready for the off.","Everything is finished. Now it is just waiting."]]
 ];
 
 var BUMP_KEY = "bump.due";
@@ -5025,18 +5027,18 @@ function gToLb(g){
 
 /* start month/day, glyph, emoji, name, element, one-liner */
 var ZODIAC = [
-  [1,20,"♒","🏺","Aquarius","Air","the original free thinker — curious, contrary, and quietly certain they know better"],
-  [2,19,"♓","🐟","Pisces","Water","dreamy and soft-hearted, with a knack for feeling the room before anyone speaks"],
-  [3,21,"♈","🐏","Aries","Fire","first out of the gate and straight into everything, headfirst and unbothered"],
-  [4,20,"♉","🐂","Taurus","Earth","stubborn in the best way, and deeply committed to snacks and comfort"],
-  [5,21,"♊","👯","Gemini","Air","chatty, quick and delightfully changeable — two moods before breakfast"],
-  [6,21,"♋","🦀","Water","Water","tender, homely and fiercely loyal, with a shell for the days that need one"],
-  [7,23,"♌","🦁","Leo","Fire","born for the spotlight and generous with it — warm, dramatic, impossible to ignore"],
-  [8,23,"♍","🌾","Virgo","Earth","noticing everything, fixing most of it, and organising the rest"],
-  [9,23,"♎","⚖️","Libra","Air","charming and fair-minded, and will take a full week to pick a favourite colour"],
-  [10,23,"♏","🦂","Scorpio","Water","intense, private and all-in on the people they love"],
-  [11,22,"♐","🏹","Sagittarius","Fire","adventurous and blunt, already planning something you have not agreed to"],
-  [12,22,"♑","🐐","Capricorn","Earth","an old soul from day one — patient, determined, quietly running things"]
+  [1,20,"â","ðº","Aquarius","Air","the original free thinker â curious, contrary, and quietly certain they know better"],
+  [2,19,"â","ð","Pisces","Water","dreamy and soft-hearted, with a knack for feeling the room before anyone speaks"],
+  [3,21,"â","ð","Aries","Fire","first out of the gate and straight into everything, headfirst and unbothered"],
+  [4,20,"â","ð","Taurus","Earth","stubborn in the best way, and deeply committed to snacks and comfort"],
+  [5,21,"â","ð¯","Gemini","Air","chatty, quick and delightfully changeable â two moods before breakfast"],
+  [6,21,"â","ð¦","Water","Water","tender, homely and fiercely loyal, with a shell for the days that need one"],
+  [7,23,"â","ð¦","Leo","Fire","born for the spotlight and generous with it â warm, dramatic, impossible to ignore"],
+  [8,23,"â","ð¾","Virgo","Earth","noticing everything, fixing most of it, and organising the rest"],
+  [9,23,"â","âï¸","Libra","Air","charming and fair-minded, and will take a full week to pick a favourite colour"],
+  [10,23,"â","ð¦","Scorpio","Water","intense, private and all-in on the people they love"],
+  [11,22,"â","ð¹","Sagittarius","Fire","adventurous and blunt, already planning something you have not agreed to"],
+  [12,22,"â","ð","Capricorn","Earth","an old soul from day one â patient, determined, quietly running things"]
 ];
 /* Cancer's name got clobbered above; set it straight */
 ZODIAC[5][4] = "Cancer";
@@ -5061,24 +5063,24 @@ function signStart(i, year){
 
 /* ---------------- the same birthday, elsewhere ---------------- */
 var CN_ANIMALS = [
-  ["Rat","🐀"],["Ox","🐂"],["Tiger","🐅"],["Rabbit","🐇"],
-  ["Dragon","🐉"],["Snake","🐍"],["Horse","🐎"],["Goat","🐐"],
-  ["Monkey","🐒"],["Rooster","🐓"],["Dog","🐕"],["Pig","🐖"]
+  ["Rat","ð"],["Ox","ð"],["Tiger","ð"],["Rabbit","ð"],
+  ["Dragon","ð"],["Snake","ð"],["Horse","ð"],["Goat","ð"],
+  ["Monkey","ð"],["Rooster","ð"],["Dog","ð"],["Pig","ð"]
 ];
 var CN_ELEMENTS = ["Wood","Wood","Fire","Fire","Earth","Earth","Metal","Metal","Water","Water"];
 /* lunar new year falls between 21 Jan and 20 Feb, so a January baby belongs to the year before */
 var LUNAR_NY = {2026:"02-17",2027:"02-06",2028:"01-26",2029:"02-13",2030:"02-03",2031:"01-23",2032:"02-11"};
 /* Vietnam swaps the Rabbit for a Cat, and the Ox for a Buffalo */
-var VN_SWAP = {Rabbit:["Cat","🐈"], Ox:["Buffalo","🐃"], Goat:["Goat","🐐"]};
+var VN_SWAP = {Rabbit:["Cat","ð"], Ox:["Buffalo","ð"], Goat:["Goat","ð"]};
 /* sidereal sun signs: roughly 23 days behind the Western ones */
 var VEDIC = [[4,14,"Mesha","Aries"],[5,15,"Vrishabha","Taurus"],[6,15,"Mithuna","Gemini"],
              [7,16,"Karka","Cancer"],[8,17,"Simha","Leo"],[9,17,"Kanya","Virgo"],
              [10,17,"Tula","Libra"],[11,16,"Vrischika","Scorpio"],[12,16,"Dhanu","Sagittarius"],
              [1,15,"Makara","Capricorn"],[2,13,"Kumbha","Aquarius"],[3,15,"Meena","Pisces"]];
 /* Burmese astrology assigns a sign to the day of the week you are born */
-var BURMESE = [["Tiger","🐅"],["Lion","🦁"],["Tusked elephant","🐘"],
-               ["Rat","🐀"],["Guinea pig","🐹"],["Naga serpent","🐉"],
-               ["Garuda","🦅"]];
+var BURMESE = [["Tiger","ð"],["Lion","ð¦"],["Tusked elephant","ð"],
+               ["Rat","ð"],["Guinea pig","ð¹"],["Naga serpent","ð"],
+               ["Garuda","ð¦"]];
 /* Robert Graves' 20th-century tree calendar - modern, not ancient */
 var CELTIC = [[12,24,"Birch"],[1,21,"Rowan"],[2,18,"Ash"],[3,18,"Alder"],[4,15,"Willow"],
               [5,13,"Hawthorn"],[6,10,"Oak"],[7,8,"Holly"],[8,5,"Hazel"],[9,2,"Vine"],
@@ -5120,7 +5122,7 @@ function renderWorld(){
   var westName = zodiacFor(d).z[4];        /* the tropical sign, for contrast */
 
   var tiles = [
-    ["India", "ॐ", ved[2] + " (" + ved[3] + ")",
+    ["India", "à¥", ved[2] + " (" + ved[3] + ")",
      "Vedic astrology reads the sidereal sky, which has drifted about 23 days from the Western one. " +
      "The West calls this " + westName + "; India calls it " + ved[2] + ".", ""],
     ["Vietnam", vn[1], vn[0],
@@ -5128,7 +5130,7 @@ function renderWorld(){
                             : "the same twelve-animal cycle, though Vietnam swaps the Rabbit for a Cat and the Ox for a Buffalo", ""],
     ["Myanmar", bur[1], bur[0],
      "Burmese astrology gives you a sign for the weekday you are born \\u2014 eight in all, because Wednesday counts twice", ""],
-    ["Celtic revival", "🌳", cel[2] + " tree",
+    ["Celtic revival", "ð³", cel[2] + " tree",
      "from a tree calendar invented by the poet Robert Graves in 1948, and often mistaken for something far older", ""],
     ["China", animal[1], element + " " + animal[0],
      "the " + yy + " " + element.toLowerCase() + " " + animal[0].toLowerCase() +
@@ -5170,7 +5172,7 @@ function renderZodiac(){
     esc(z[4]) + ' <span id="bStarEmoji">' + z[3] + "</span>";
   var nxt = ZODIAC[(i + 1) % 12];
   document.getElementById("bStarDates").textContent =
-    MON[z[0]-1] + " " + z[1] + " – " + MON[nxt[0]-1] + " " + (nxt[1]-1) + "  ·  " + z[5];
+    MON[z[0]-1] + " " + z[1] + " â " + MON[nxt[0]-1] + " " + (nxt[1]-1) + "  Â·  " + z[5];
   document.getElementById("bStarTraits").textContent = "Reportedly " + z[6] + ".";
 
   /* a due date is a guess, so say what an early or late arrival would mean */
@@ -5181,9 +5183,9 @@ function renderZodiac(){
   var sincePrev = diffDays(d, thisStart);
   var prev = ZODIAC[(i + 11) % 12];
   var msg = "";
-  if(toNext <= 6) msg = "Cusp alert — arrive " + plural(toNext, "day") + " late and you get " + anSign(nxt[4]) + " " + nxt[3] + " instead.";
-  else if(sincePrev <= 6) msg = "Cusp alert — arrive " + plural(sincePrev + 1, "day") + " early and you get " + anSign(prev[4]) + " " + prev[3] + " instead.";
-  else msg = "Babies rarely read the calendar, so this could still shift — " + nxt[4] + " " +
+  if(toNext <= 6) msg = "Cusp alert â arrive " + plural(toNext, "day") + " late and you get " + anSign(nxt[4]) + " " + nxt[3] + " instead.";
+  else if(sincePrev <= 6) msg = "Cusp alert â arrive " + plural(sincePrev + 1, "day") + " early and you get " + anSign(prev[4]) + " " + prev[3] + " instead.";
+  else msg = "Babies rarely read the calendar, so this could still shift â " + nxt[4] + " " +
              nxt[3] + " starts in " + plural(toNext, "day") + ".";
   document.getElementById("bStarCusp").textContent = msg;
 }
@@ -5284,7 +5286,7 @@ function renderBump(){
 
   document.getElementById("bDueSrc").textContent =
     "Due " + fmtLong(parseISO(due)) + ", " + parseISO(due).getFullYear() +
-    " — locked 39 weeks after the first beta. ";
+    " â locked 39 weeks after the first beta. ";
   document.getElementById("bPick").value = String(wk);
   document.getElementById("bPrev").disabled = wk <= 1;
   document.getElementById("bNext").disabled = wk >= 40;
@@ -5375,7 +5377,7 @@ var MC_MILESTONES = [
     name: "Artemis II",
     tag: "confirmed",
     blurb: "Four astronauts loop around the far side of the Moon and come home. " +
-           "No landing — the point is to fly the crew capsule with people in it.",
+           "No landing â the point is to fly the crew capsule with people in it.",
     note: "First humans past low Earth orbit since Apollo 17 in 1972.",
     src: "https://www.nasa.gov/artemis-ii/",
     srcName: "nasa.gov"
@@ -5387,7 +5389,7 @@ var MC_MILESTONES = [
     tag: "spec",
     blurb: "SpaceX aims to send Starships to Mars with no one aboard, to prove the " +
            "vehicle can survive the trip and the landing.",
-    note: "Mars windows open only every 26 months. Miss one and the next is 2028–29.",
+    note: "Mars windows open only every 26 months. Miss one and the next is 2028â29.",
     src: "https://www.spacex.com/humanspaceflight/mars/",
     srcName: "spacex.com"
   },
@@ -5404,7 +5406,7 @@ var MC_MILESTONES = [
   },
   {
     date: "2029-06-01",
-    when: "2029–31, aspirational",
+    when: "2029â31, aspirational",
     name: "First crewed flight to Mars",
     tag: "spec",
     blurb: "SpaceX's stated goal for putting people on Mars. No hardware has yet " +
@@ -5433,7 +5435,7 @@ var MC_SKY = {
     note: "The best three months of the year for stargazing, and the coldest. " +
           "Give your eyes twenty minutes in the dark before you judge it.",
     see: [
-      ["Orion", "The hunter. Three stars in a short straight row make his belt — the easiest thing to find in the whole sky."],
+      ["Orion", "The hunter. Three stars in a short straight row make his belt â the easiest thing to find in the whole sky."],
       ["The Pleiades", "A tiny smudge of stars. Look slightly to one side of it and more of them appear."],
       ["Taurus", "A V of stars for the bull's face, with orange Aldebaran as its eye."]
     ]
@@ -5445,13 +5447,13 @@ var MC_SKY = {
     see: [
       ["The Big Dipper", "High overhead. Follow the curve of its handle and you arrive at Arcturus."],
       ["Leo", "A backwards question mark of stars forms the lion's mane."],
-      ["Boötes", "A long kite shape, anchored by the orange star Arcturus."]
+      ["BoÃ¶tes", "A long kite shape, anchored by the orange star Arcturus."]
     ]
   },
   summer: {
     label: "Summer sky",
     note: "The Milky Way runs right overhead on a dark night, well away from town " +
-          "lights — the flat disc of our own galaxy, seen edge on from inside it.",
+          "lights â the flat disc of our own galaxy, seen edge on from inside it.",
     see: [
       ["The Summer Triangle", "Three brilliant stars in three different constellations, forming a wide triangle."],
       ["Scorpius", "A genuine scorpion shape low in the south, with red Antares at its heart."],
@@ -5463,7 +5465,7 @@ var MC_SKY = {
     note: "Clear, steady air and early darkness. This is the season to find another " +
           "galaxy with nothing but your eyes.",
     see: [
-      ["The Andromeda Galaxy", "A faint oval smudge — a trillion stars, and the furthest thing the eye can see unaided."],
+      ["The Andromeda Galaxy", "A faint oval smudge â a trillion stars, and the furthest thing the eye can see unaided."],
       ["The Great Square", "Four stars marking out Pegasus, the flying horse."],
       ["Cassiopeia", "A big W of five stars that never sets."]
     ]
@@ -5471,18 +5473,18 @@ var MC_SKY = {
 };
 
 var MC_STARS = [
-  ["Sirius", "The brightest star in the night sky, and one of the closest — 8.6 light years away."],
+  ["Sirius", "The brightest star in the night sky, and one of the closest â 8.6 light years away."],
   ["Betelgeuse", "A red supergiant so large it would swallow Jupiter's orbit. It will explode, though probably not this century."],
   ["Polaris", "The north star. It barely moves all night while everything else wheels around it."],
   ["Vega", "Blue-white and only 25 light years off. In 12,000 years it takes over as the north star."]
 ];
 
 var MC_FACTS = [
-  ["The Moon is drifting away.", "About 3.8 cm a year — roughly the rate fingernails grow. It was much closer, and looked much bigger, when the dinosaurs saw it."],
+  ["The Moon is drifting away.", "About 3.8 cm a year â roughly the rate fingernails grow. It was much closer, and looked much bigger, when the dinosaurs saw it."],
   ["A day on Mars is 24 hours 37 minutes.", "Almost exactly ours, by coincidence. A Mars year is 687 days, so a child born there would turn one at nearly two."],
   ["Starlight is old news.", "Look at a star 400 light years away and you are seeing light that left it before anyone had built a telescope."],
   ["Twelve people have walked on the Moon.", "All of them between 1969 and 1972, all of them men. No one has been back since."],
-  ["Space starts closer than you think.", "The usual boundary is 100 km up — less than an hour's drive, if you could drive straight up."]
+  ["Space starts closer than you think.", "The usual boundary is 100 km up â less than an hour's drive, if you could drive straight up."]
 ];
 
 /* EDIT ME TOO. Sky events, filtered to whatever the current due date implies.
@@ -5690,13 +5692,13 @@ function renderMc(){
     var li = document.createElement("li");
     li.className = "is-" + m.tag;
     li.innerHTML =
-      '<span class="mc-when">' + esc(m.when) + (past ? " · date has passed" : "") + "</span>" +
+      '<span class="mc-when">' + esc(m.when) + (past ? " Â· date has passed" : "") + "</span>" +
       '<p class="mc-mission">' + esc(m.name) +
         '<em class="mc-tag t-' + m.tag + '">' + mcTagText(m.tag) + "</em></p>" +
       '<p class="mc-blurb">' + esc(m.blurb) + "</p>" +
       (age ? '<span class="mc-age">Your child: ' + esc(age) + "</span>" : "") +
       '<a class="mc-link" href="' + esc(m.src) + '" target="_blank" rel="noopener">' +
-        esc(m.srcName) + " ↗</a>" +
+        esc(m.srcName) + " â</a>" +
       (m.note ? '<p class="mc-caveat">' + esc(m.note) + "</p>" : "");
     host.appendChild(li);
   });
@@ -5798,7 +5800,7 @@ function mcApod(){
   if(mcApodDone) return null;
   mcApodDone = true;
   var box = document.getElementById("mcApod"), stamp = document.getElementById("mcApodDate");
-  if(mcLoadedAt) box.innerHTML = '<p class="mc-loading">Looking for today\\'s picture…</p>';
+  if(mcLoadedAt) box.innerHTML = '<p class="mc-loading">Looking for today\\'s pictureâ¦</p>';
   var q = mcSeen();
   var qs = [];
   if(q.length) qs.push("seen=" + encodeURIComponent(q.join(",")));
@@ -5809,7 +5811,7 @@ function mcApod(){
   }).then(function(d){
     if(!d || d.error || (!d.img && !d.video)) throw new Error((d && d.error) || "no image");
     mcSawSource(d.src);
-    stamp.textContent = (d.date || "") + (d.stale ? " · last available" : "");
+    stamp.textContent = (d.date || "") + (d.stale ? " Â· last available" : "");
     var lab = document.getElementById("mcApodLabel");
     if(lab) lab.textContent = d.label || "Astronomy Picture of the Day";
     var body = "";
@@ -5819,13 +5821,13 @@ function mcApod(){
     body += '<div class="cap"><h3>' + esc(d.title || "Untitled") + "</h3>" +
             (d.text ? "<p>" + esc(d.text) + "</p>" : "") +
             (d.video ? '<a class="mc-vidlink" href="' + esc(d.video) +
-              '" target="_blank" rel="noopener">Today\\'s entry is a video — watch it ↗</a>' : "") +
+              '" target="_blank" rel="noopener">Today\\'s entry is a video â watch it â</a>' : "") +
             '<div class="mc-srcbar">' +
               '<span class="mc-srctag">Image: ' + esc(d.label || d.src || "unknown") + "</span>" +
               (d.page ? '<a class="mc-srclink" href="' + esc(d.page) + '" target="_blank" ' +
-                        'rel="noopener">See it at the source ↗</a>' : "") +
-              (d.credit ? '<span class="mc-srcnote">© ' + esc(d.credit) + "</span>"
-                        : (d.src === "apod" ? '<span class="mc-srcnote">Public domain · NASA</span>' : "")) +
+                        'rel="noopener">See it at the source â</a>' : "") +
+              (d.credit ? '<span class="mc-srcnote">Â© ' + esc(d.credit) + "</span>"
+                        : (d.src === "apod" ? '<span class="mc-srcnote">Public domain Â· NASA</span>' : "")) +
             "</div></div>";
     box.innerHTML = body;
     mcMarkLoaded();
@@ -5987,24 +5989,24 @@ function mcRefresh(){
 var LULLABIES = [
   { c:"Japan", ll:[36.2,138.3], flag:"\\uD83C\\uDDEF\\uD83C\\uDDF5", song:"Edo Komoriuta", native:"\\u6C5F\\u6238\\u5B50\\u5B88\\u5504",
     mean:"Lullaby of Edo",
-    verse:"ねんねんころりよ おころりよ",
+    verse:"ã­ãã­ããããã ããããã",
     roman:"Nennen korori yo, okorori yo",
     english:"Sleep, sleep, little one, hush now, little one",
     note:"One of the oldest cradle songs still sung in Japan, from the city that later became Tokyo. " +
          "The melody is deliberately spare \\u2014 built for rocking, not for performing.",
     fact:"The Japanese koto and shamisen sometimes join the voice, but the oldest versions are spare " +
-         "on purpose — a melody built for rocking, not for a stage." },
+         "on purpose â a melody built for rocking, not for a stage." },
   { c:"Wales", ll:[52.3,-3.8], flag:"\\uD83C\\uDFF4\\uDB40\\uDC67\\uDB40\\uDC62\\uDB40\\uDC77\\uDB40\\uDC6C\\uDB40\\uDC73\\uDB40\\uDC7F", song:"Suo G\\u00E2n", native:"",
     mean:"Lullaby",
     verse:"Huna blentyn ar fy mynwes,\\nClyd a chynnes ydyw hon",
-    english:"Sleep, child, upon my breast — it is snug and warm here",
+    english:"Sleep, child, upon my breast â it is snug and warm here",
     note:"Written down around 1800 and never really put away since. It is still the song Welsh choirs " +
          "reach for when they want a room to go completely silent.",
     fact:"Spielberg used it in Empire of the Sun, sung by a boy soprano over a squadron of fighter " +
          "planes \\u2014 which is how a Welsh cradle song ended up in cinemas all over the world." },
   { c:"Germany", ll:[51.2,10.5], flag:"\\uD83C\\uDDE9\\uD83C\\uDDEA", song:"Guten Abend, gut\\u2019 Nacht", native:"",
     mean:"Good evening, good night",
-    verse:"Guten Abend, gut’ Nacht,\\nmit Rosen bedacht",
+    verse:"Guten Abend, gutâ Nacht,\\nmit Rosen bedacht",
     english:"Good evening, good night, tucked in under roses",
     note:"Brahms wrote it in 1868 as a present for his friend Bertha Faber when her second son was born. " +
          "You almost certainly know the tune already.",
@@ -6012,17 +6014,17 @@ var LULLABIES = [
          "a private joke, tucked where only she would ever find it." },
   { c:"Russia", ll:[55.8,37.6], flag:"\\uD83C\\uDDF7\\uD83C\\uDDFA", song:"Bayu Bayushki Bayu", native:"\\u0411\\u0430\\u044E-\\u0431\\u0430\\u044E\\u0448\\u043A\\u0438-\\u0431\\u0430\\u044E",
     mean:"Hush, little hush",
-    verse:"Баю-баюшки-баю,\\nне ложися на краю",
+    verse:"ÐÐ°Ñ-Ð±Ð°ÑÑÐºÐ¸-Ð±Ð°Ñ,\\nÐ½Ðµ Ð»Ð¾Ð¶Ð¸ÑÑ Ð½Ð° ÐºÑÐ°Ñ",
     roman:"Bayu-bayushki-bayu, ne lozhisya na krayu",
-    english:"Hush-a-bye, hush — do not lie down at the edge",
+    english:"Hush-a-bye, hush â do not lie down at the edge",
     note:"The word bayu is pure sound rather than meaning \\u2014 a Russian hush that exists mostly so it " +
          "can be sung very softly, over and over.",
-    fact:"Bayu is not really a word with a dictionary meaning — it is a hush that Russian uses " +
+    fact:"Bayu is not really a word with a dictionary meaning â it is a hush that Russian uses " +
          "the way other languages use nana or jajang. Sound first, sense later." },
   { c:"Ireland", ll:[53.4,-8.0], flag:"\\uD83C\\uDDEE\\uD83C\\uDDEA", song:"Seoith\\u00EDn, Se\\u00F3", native:"",
     mean:"Hush, hush",
-    verse:"Seoithín, seó, hó bhó bhó,\\nar mo chroidhe-se a thá tú",
-    english:"Hush now, hush — it is on my own heart that you are lying",
+    verse:"SeoithÃ­n, seÃ³, hÃ³ bhÃ³ bhÃ³,\\nar mo chroidhe-se a thÃ¡ tÃº",
+    english:"Hush now, hush â it is on my own heart that you are lying",
     note:"Irish-language, and made mostly of soothing noises rather than words. Seoith\\u00EDn is close to " +
          "the sound of an exhale.",
     fact:"Irish-language cradle songs often keep the old hush-words even when daily speech has moved " +
@@ -6030,13 +6032,13 @@ var LULLABIES = [
   { c:"South Africa", ll:[-30.6,22.9], flag:"\\uD83C\\uDDFF\\uD83C\\uDDE6", song:"Thula Baba", native:"",
     mean:"Hush, baby",
     verse:"Thula thula thula baba,\\nthula sana",
-    english:"Hush, hush, hush little one — hush, my baby",
+    english:"Hush, hush, hush little one â hush, my baby",
     note:"Zulu. Thula simply means be still. It is sung slowly, and almost never by one person alone.",
     fact:"Zulu singing is built for groups, so even the lullabies tend to sprout a second and third " +
          "harmony line the moment there is anyone else in the room." },
   { c:"India", ll:[20.6,79.0], flag:"\\uD83C\\uDDEE\\uD83C\\uDDF3", song:"Ghum Parani Mashi Pishi", native:"",
     mean:"Sleep-bringing aunties",
-    verse:"ঘুম পাড়ানি মাসি পিসি,\\nমোদের বাড়ি এসো",
+    verse:"à¦à§à¦® à¦ªà¦¾à§à¦¾à¦¨à¦¿ à¦®à¦¾à¦¸à¦¿ à¦ªà¦¿à¦¸à¦¿,\\nà¦®à§à¦¦à§à¦° à¦¬à¦¾à§à¦¿ à¦à¦¸à§",
     roman:"Ghum parani mashi pishi, moder bari esho",
     english:"Sleep-bringing aunties, do come round to our house",
     note:"A Bengali classic that summons two aunties whose entire job is to turn up and put the baby " +
@@ -6045,31 +6047,31 @@ var LULLABIES = [
          "negotiation, which is a very Bengali way to go about it." },
   { c:"China", ll:[35.9,104.2], flag:"\\uD83C\\uDDE8\\uD83C\\uDDF3", song:"Yue Guang Guang", native:"\\u6708\\u5149\\u5149",
     mean:"Bright, bright moonlight",
-    verse:"月光光，秀才郎",
-    roman:"Yuè guāng guāng, xiù cái láng",
-    english:"Moonlight, bright moonlight — and a young scholar beneath it",
+    verse:"æååï¼ç§æé",
+    roman:"YuÃ¨ guÄng guÄng, xiÃ¹ cÃ¡i lÃ¡ng",
+    english:"Moonlight, bright moonlight â and a young scholar beneath it",
     note:"A Hakka and Cantonese cradle song that starts by pointing out the moon and then wanders off " +
          "through fields, rice and family.",
     fact:"Versions turn up all across southern China with completely different later verses. The first " +
          "line stays put; everything after it goes local." },
   { c:"France", ll:[46.6,2.2], flag:"\\uD83C\\uDDEB\\uD83C\\uDDF7", song:"Fais Dodo, Colas mon p\\u2019tit fr\\u00E8re", native:"",
     mean:"Go to sleep, Colas my little brother",
-    verse:"Fais dodo, Colas mon p’tit frère,\\nfais dodo, t’auras du lolo",
-    english:"Go to sleep, Colas my little brother — sleep, and you shall have your milk",
+    verse:"Fais dodo, Colas mon pâtit frÃ¨re,\\nfais dodo, tâauras du lolo",
+    english:"Go to sleep, Colas my little brother â sleep, and you shall have your milk",
     note:"Dodo is French baby-talk for sleep, worn smooth from dormir the way night-night wore down " +
          "from goodnight.",
     fact:"In Cajun Louisiana a dance party is still called a fais do-do \\u2014 named after the room where " +
          "the babies were put down so that the parents could go and dance." },
   { c:"Brazil", ll:[-14.2,-51.9], flag:"\\uD83C\\uDDE7\\uD83C\\uDDF7", song:"Nana Nen\\u00EA", native:"",
     mean:"Sleep, little one",
-    verse:"Nana nenê, nana nenê",
+    verse:"Nana nenÃª, nana nenÃª",
     english:"Sleep, little one, sleep",
     note:"Short, sweet, and known to essentially every child in Brazil.",
     fact:"Nana is Brazil\\u2019s hush-word, kin to Spanish nana and Italian ninna nanna \\u2014 a sound that " +
          "travelled with Portuguese and made itself at home." },
   { c:"Mexico", ll:[23.6,-102.6], flag:"\\uD83C\\uDDF2\\uD83C\\uDDFD", song:"Se\\u00F1ora Santana", native:"",
     mean:"Lady Saint Anne",
-    verse:"Señora Santana, ¿por qué llora el niño?\\nPor una manzana que se le ha perdido",
+    verse:"SeÃ±ora Santana, Â¿por quÃ© llora el niÃ±o?\\nPor una manzana que se le ha perdido",
     english:"Lady Saint Anne, why is the child crying? Over an apple that he has lost",
     note:"A call-and-answer song where Saint Anne is asked why the baby is crying, and offers an apple " +
          "to settle the matter.",
@@ -6085,29 +6087,29 @@ var LULLABIES = [
   { c:"Poland", ll:[51.9,19.1], flag:"\\uD83C\\uDDF5\\uD83C\\uDDF1", song:"Aaa, Kotki Dwa", native:"",
     mean:"Ah, two little kittens",
     verse:"Aaa, kotki dwa,\\nszare bure obydwa",
-    english:"Ah, two little kittens — both of them grey and brown",
+    english:"Ah, two little kittens â both of them grey and brown",
     note:"Two kittens, both of them grey, both up to nothing much at all.",
     fact:"Ask a Polish adult to sing something from their childhood and there is a fair chance this is " +
          "what arrives, word-perfect, forty years later." },
   { c:"Turkey", ll:[39.0,35.2], flag:"\\uD83C\\uDDF9\\uD83C\\uDDF7", song:"Dandini Dandini Dastana", native:"",
     mean:"A rocking song",
-    verse:"Dandini dandini dastana,\\ndanalar girmiş bostana",
-    english:"Rock, rock along — the calves have got into the vegetable patch",
+    verse:"Dandini dandini dastana,\\ndanalar girmiÅ bostana",
+    english:"Rock, rock along â the calves have got into the vegetable patch",
     note:"A ninni \\u2014 the Turkish word for lullaby \\u2014 about calves who have got into the cabbage " +
          "patch again.",
     fact:"The gardener is asked to shoo them out gently. Even the telling-off in this song is done softly." },
   { c:"Lebanon", ll:[33.9,35.9], flag:"\\uD83C\\uDDF1\\uD83C\\uDDE7", song:"Yalla Tnam Rima", native:"\\u064A\\u0644\\u0627 \\u062A\\u0646\\u0627\\u0645 \\u0631\\u064A\\u0645\\u0627",
     mean:"Come, sleep, Rima",
-    verse:"يلّا تنام ريما،\\nيلّا يجيها النوم",
+    verse:"ÙÙÙØ§ ØªÙØ§Ù Ø±ÙÙØ§Ø\\nÙÙÙØ§ ÙØ¬ÙÙØ§ Ø§ÙÙÙÙ",
     roman:"Yalla tnam Rima, yalla yijiha el-noum",
-    english:"Come now, sleep Rima — come, let sleep find her",
+    english:"Come now, sleep Rima â come, let sleep find her",
     note:"A Levantine cradle song that promises the child a pigeon to play with, if only they will " +
          "close their eyes first.",
     fact:"Fairuz recorded it, and hers is the version that plays across the Arabic-speaking world \\u2014 " +
          "a lullaby that quietly became a standard." },
   { c:"Israel", ll:[31.0,34.9], flag:"\\uD83C\\uDDEE\\uD83C\\uDDF1", song:"Numi Numi", native:"\\u05E0\\u05D5\\u05DE\\u05D9 \\u05E0\\u05D5\\u05DE\\u05D9",
     mean:"Sleep, sleep",
-    verse:"נומי נומי ילדתי",
+    verse:"× ××× × ××× ××××ª×",
     roman:"Numi numi yaldati",
     english:"Sleep, sleep, my little girl",
     note:"Written in the early twentieth century, while Hebrew was being brought back as an everyday " +
@@ -6116,7 +6118,7 @@ var LULLABIES = [
          "for a very old language." },
   { c:"Korea", ll:[36.5,127.9], flag:"\\uD83C\\uDDF0\\uD83C\\uDDF7", song:"Jajangga", native:"\\uC790\\uC7A5\\uAC00",
     mean:"Lullaby",
-    verse:"자장자장 우리 아기",
+    verse:"ìì¥ìì¥ ì°ë¦¬ ìê¸°",
     roman:"Jajang jajang uri agi",
     english:"Hush now, hush now, our own baby",
     note:"Jajang is the hush-sound itself, so the song is named after the noise you make while settling " +
@@ -6125,8 +6127,8 @@ var LULLABIES = [
          "it down while the baby sleeps." },
   { c:"Mongolia", ll:[46.9,103.8], flag:"\\uD83C\\uDDF2\\uD83C\\uDDF3", song:"Buuvei", native:"",
     mean:"The soothing word",
-    verse:"Бүүвэй, бүүвэй",
-    roman:"Büüvei, büüvei",
+    verse:"ÐÒ¯Ò¯Ð²ÑÐ¹, Ð±Ò¯Ò¯Ð²ÑÐ¹",
+    roman:"BÃ¼Ã¼vei, bÃ¼Ã¼vei",
     english:"Hush now, hush now",
     note:"Buuvei is the refrain, repeated until it stops meaning anything in particular and starts " +
          "simply being warm.",
@@ -6142,7 +6144,7 @@ var LULLABIES = [
   { c:"Italy", ll:[41.9,12.6], flag:"\\uD83C\\uDDEE\\uD83C\\uDDF9", song:"Ninna Nanna", native:"",
     mean:"Lullaby",
     verse:"Ninna nanna, ninna oh,\\nquesto bimbo a chi lo do?",
-    english:"Lullaby, lullaby oh — this little one, to whom shall I give him?",
+    english:"Lullaby, lullaby oh â this little one, to whom shall I give him?",
     note:"Ninna nanna is simply what Italians call a lullaby, and it is also the opening line of about " +
          "a hundred different ones.",
     fact:"The phrase is echoic \\u2014 it imitates the sound of rocking. The name of the entire genre is " +
@@ -6171,7 +6173,7 @@ var LULLABIES = [
     song:"Twinkle, Twinkle, Little Star",
     mean:"The little star",
     note:"English verses set to a French melody children already knew as Ah! vous dirai-je, maman.",
-    fact:"The same tune also carries the alphabet song and Baa Baa Black Sheep — one melody doing three jobs, which is why it is almost impossible to forget.",
+    fact:"The same tune also carries the alphabet song and Baa Baa Black Sheep â one melody doing three jobs, which is why it is almost impossible to forget.",
     verse:"Twinkle, twinkle, little star,\\nHow I wonder what you are",
     english:"Twinkle, twinkle, little star, how I wonder what you are" },
   { c:"Scotland",
@@ -6896,7 +6898,7 @@ function lovePreview(s){
   var cut = s.slice(0, 140);
   var sp = cut.lastIndexOf(" ");
   if(sp > 80) cut = cut.slice(0, sp);
-  return cut.replace(/[.,;:\\s]+$/, "") + "…";
+  return cut.replace(/[.,;:\\s]+$/, "") + "â¦";
 }
 
 function loveRender(){
@@ -6962,7 +6964,7 @@ function loveLoad(){
   photoIn.addEventListener("change", function(){
     var f = photoIn.files && photoIn.files[0];
     if(!f) return clearPhoto();
-    loveStatus("Shrinking the photo…");
+    loveStatus("Shrinking the photoâ¦");
     lovePrepPhoto(f, function(photo, err){
       if(err){ loveStatus(err, "bad"); clearPhoto(); return; }
       lovePhoto = photo;
@@ -6982,7 +6984,7 @@ function loveLoad(){
     if(!author){ loveStatus("Please add your name.", "bad"); return; }
     if(!body){ loveStatus("The letter is still empty.", "bad"); return; }
     saveBtn.disabled = true;
-    loveStatus("Saving…");
+    loveStatus("Savingâ¦");
     fetch("/api/letters", {
       method: "POST", credentials: "same-origin",
       headers: { "content-type": "application/json" },
@@ -7028,7 +7030,7 @@ function loveLoad(){
         document.body.appendChild(a); a.click(); a.remove();
         setTimeout(function(){ URL.revokeObjectURL(a.href); }, 4000);
       })
-      .catch(function(){ loveStatus("Export failed — could not reach the letters.", "bad"); });
+      .catch(function(){ loveStatus("Export failed â could not reach the letters.", "bad"); });
   });
 })();
 
@@ -7171,7 +7173,7 @@ function famPost(payload, statusId, okMsg, after){
   document.getElementById("fmPhotoFile").addEventListener("change", function(){
     var f = this.files && this.files[0];
     if(!f) return;
-    famStatus("fmAddStatus", "Shrinking the photo…");
+    famStatus("fmAddStatus", "Shrinking the photoâ¦");
     lovePrepPhoto(f, function(photo, err){
       if(err){ famStatus("fmAddStatus", err, "bad"); famPhoto = null; return; }
       famPhoto = photo;
@@ -7207,7 +7209,7 @@ function famPost(payload, statusId, okMsg, after){
           document.getElementById("fmExSource").value = "";
         });
     } else if(k === "book"){
-      famStatus("fmAddStatus", "Looking up a cover…");
+      famStatus("fmAddStatus", "Looking up a coverâ¦");
       famPost({ kind: "book",
                 title: document.getElementById("fmBkTitle").value,
                 author: document.getElementById("fmBkAuthor").value,
@@ -7262,10 +7264,11 @@ function famPost(payload, statusId, okMsg, after){
    Names in the Who-are-you dropdown are pulled from the Support team column
    with a light heuristic. Matching is a case-insensitive substring, so a
    chosen name still hits a day even if that cell also names other people.
-   Each download is one event per support day, titled "person — step". */
+   Each download is one event per support day, titled "person â step". */
 var SUP_STOP = ("would like to join joining available availability and or if can could please "
   + "maybe the a an is are be will want wants come coming with for on at me my we us plus "
   + "help helping cover covering drive driving").split(" ");
+var SUP_ALL = "__all__";
 
 /* \`state\` is null until the first fetch lands, and these run at parse time too */
 function supReady(){ return typeof state !== "undefined" && state && state.cycle; }
@@ -7409,7 +7412,16 @@ function supRenderCal(){
   if(!host) return;
   var whoEl = document.getElementById("supWho");
   var who = whoEl ? whoEl.value.trim() : "";
-  var rows = supMatches(who).slice().sort(function(a, b){ return a.date - b.date; });
+  var countEl = document.getElementById("supCount");
+  if(!who){
+    if(countEl) countEl.textContent = "";
+    host.hidden = true;
+    host.innerHTML = "";
+    return;
+  }
+  host.hidden = false;
+  var filter = who === SUP_ALL ? "" : who;
+  var rows = supMatches(filter).slice().sort(function(a, b){ return a.date - b.date; });
   var countEl = document.getElementById("supCount");
   if(countEl){
     countEl.textContent = rows.length
@@ -7418,8 +7430,9 @@ function supRenderCal(){
   }
   if(!rows.length){
     host.innerHTML = '<li class="empty">' +
-      (who ? "No support days found for \\u201c" + esc(who) + "\\u201d."
-           : "No one is named on a support day yet. Add a name in the Support team column below.") +
+      (who === SUP_ALL
+        ? "No one is named on a support day yet. Add a name in the Support team column below."
+        : "No support days found for \\u201c" + esc(who) + "\\u201d.") +
       "</li>";
     return;
   }
@@ -7439,12 +7452,12 @@ function supRefresh(){
   if(!whoEl) return;
   var keep = whoEl.value;
   var names = supNames();
-  var html = '<option value="">Everyone</option>';
+  var html = '<option value="">(select)</option><option value="' + SUP_ALL + '">Everyone</option>';
   names.forEach(function(n){
     html += '<option value="' + esc(n) + '">' + esc(n) + "</option>";
   });
   whoEl.innerHTML = html;
-  whoEl.value = names.indexOf(keep) >= 0 ? keep : "";
+  whoEl.value = (keep === SUP_ALL || names.indexOf(keep) >= 0) ? keep : "";
   supRenderCal();
 }
 
@@ -7459,26 +7472,33 @@ function supRefresh(){
   btn.addEventListener("click", function(){
     var who = (whoEl && whoEl.value.trim()) || "";
     var fmt = (fmtEl && fmtEl.value) || "ics";
-    var rows = supMatches(who).slice().sort(function(a, b){ return a.date - b.date; });
-    if(!rows.length){
-      note.textContent = who ? "No support days found for \\u201c" + who + "\\u201d" : "No support days set yet";
+    if(!who){
+      note.textContent = "Choose a name first";
       note.className = "supdl-note bad";
       return;
     }
-    var base = supFileBase(who), name, body, type, hint;
+    var filter = who === SUP_ALL ? "" : who;
+    var rows = supMatches(filter).slice().sort(function(a, b){ return a.date - b.date; });
+    if(!rows.length){
+      note.textContent = who === SUP_ALL ? "No support days set yet" : "No support days found for \\u201c" + who + "\\u201d";
+      note.className = "supdl-note bad";
+      return;
+    }
+    var fileWho = who === SUP_ALL ? "" : who;
+    var base = supFileBase(fileWho), name, body, type, hint;
     if(fmt === "google"){
       name = base + "-google.csv";
-      body = supBuildGoogleCSV(who, rows);
+      body = supBuildGoogleCSV(fileWho, rows);
       type = "text/csv;charset=utf-8";
       hint = plural(rows.length, "day") + " \\u2014 in Google Calendar: Settings \\u2192 Import & export \\u2192 Import";
     } else if(fmt === "excel"){
       name = base + ".xls";
-      body = supBuildExcel(who, rows);
+      body = supBuildExcel(fileWho, rows);
       type = "application/vnd.ms-excel";
       hint = plural(rows.length, "day") + " saved as a spreadsheet";
     } else {
       name = base + ".ics";
-      body = supBuildICS(who, rows);
+      body = supBuildICS(fileWho, rows);
       type = "text/calendar;charset=utf-8";
       hint = plural(rows.length, "day") + " saved as an iCalendar file";
     }
@@ -7567,7 +7587,7 @@ var WOMEN_SCI = [
 ["Lab Girl","Hope Jahren"],
 ["The Immortal Life of Henrietta Lacks","Rebecca Skloot"],
 ["Rosalind Franklin: The Dark Lady of DNA","Brenda Maddox"],
-["Madame Curie","Ève Curie"],
+["Madame Curie","Ãve Curie"],
 ["Obsessive Genius: The Inner World of Marie Curie","Barbara Goldsmith"],
 ["Marie Curie: A Life","Susan Quinn"],
 ["The Glass Universe","Dava Sobel"],
@@ -7590,7 +7610,7 @@ var WOMEN_SCI = [
 ["Sally Ride: America's First Woman in Space","Lynn Sherr"],
 ["Almost Astronauts","Tanya Lee Stone"],
 ["The Code Breaker","Walter Isaacson"],
-["Breaking Through: My Life in Science","Katalin Karikó"],
+["Breaking Through: My Life in Science","Katalin KarikÃ³"],
 ["The Exceptions","Kate Zernike"],
 ["In the Shadow of Man","Jane Goodall"],
 ["Silent Spring","Rachel Carson"],
@@ -7714,13 +7734,13 @@ function libBuild(){
   /* left wall - the L'Amour room */
   var L = libPlane(S, LIB_D, LIB_H, "translate3d(-" + hw + "px,-" + hh + "px," + hd +
     "px) rotateY(90deg)", "transform-origin:0 0;background:linear-gradient(#3B2C1B,#241708)");
-  libCase(L, 520, 300, "translate3d(560px,60px,0)", "L'Amour · The Sacketts", tag(LAM_SACKETT), "Western fiction · the Sackett series");
-  libCase(L, 520, 300, "translate3d(560px,300px,0)", "L'Amour · Talon & Chantry / Kilkenny",
-    tag(LAM_TALON_CHANTRY).concat(tag(LAM_KILKENNY)), "Western fiction · series");
+  libCase(L, 520, 300, "translate3d(560px,60px,0)", "L'Amour Â· The Sacketts", tag(LAM_SACKETT), "Western fiction Â· the Sackett series");
+  libCase(L, 520, 300, "translate3d(560px,300px,0)", "L'Amour Â· Talon & Chantry / Kilkenny",
+    tag(LAM_TALON_CHANTRY).concat(tag(LAM_KILKENNY)), "Western fiction Â· series");
   var novA = tag(LAM_NOVELS).sort(sortT);
-  libCase(L, 800, 460, "translate3d(1130px,60px,0)", "L'Amour · Novels A–Z", novA, "Western fiction · novels");
-  libCase(L, 520, 300, "translate3d(1980px,60px,0)", "L'Amour · Story Collections", tag(LAM_STORIES).sort(sortT), "Short story collections");
-  libCase(L, 520, 300, "translate3d(1980px,300px,0)", "L'Amour · Nonfiction & Hopalong",
+  libCase(L, 800, 460, "translate3d(1130px,60px,0)", "L'Amour Â· Novels AâZ", novA, "Western fiction Â· novels");
+  libCase(L, 520, 300, "translate3d(1980px,60px,0)", "L'Amour Â· Story Collections", tag(LAM_STORIES).sort(sortT), "Short story collections");
+  libCase(L, 520, 300, "translate3d(1980px,300px,0)", "L'Amour Â· Nonfiction & Hopalong",
     tag(LAM_NONFIC).concat(tag(LAM_HOPALONG)), "Nonfiction, and four novels written as Tex Burns");
 
   /* right wall - women in science, and the family's own shelf */
@@ -7729,7 +7749,7 @@ function libBuild(){
   var wsci = WOMEN_SCI.map(function(b){ return [b[0], "", b[1]]; }).sort(sortT);
   libCase(R, 800, 460, "translate3d(160px,60px,0)", "Women in Science & Engineering",
     wsci.slice(0, 20), "Women in research, engineering and science");
-  libCase(R, 560, 300, "translate3d(1030px,60px,0)", "Women in Science · II",
+  libCase(R, 560, 300, "translate3d(1030px,60px,0)", "Women in Science Â· II",
     wsci.slice(20), "Women in research, engineering and science");
   var fam = (typeof famOf === "function" ? famOf("book") : []).map(function(b){
     return [b.title, "", b.author || "", b.note || ""]; });
@@ -7740,10 +7760,10 @@ function libBuild(){
   /* front wall (behind the start point): a tall case each side of the doorway */
   var F = libPlane(S, LIB_W, LIB_H, "translate3d(" + hw + "px,-" + hh + "px," + hd +
     "px) rotateY(180deg)", "transform-origin:0 0;background:linear-gradient(#3B2C1B,#241708)");
-  libCase(F, 620, 460, "translate3d(90px,60px,0)", "Reading Copies · A–L",
-    novA.slice(0, 28), "Reading copies · the same novels, shelved by the door");
-  libCase(F, 620, 460, "translate3d(1190px,60px,0)", "Reading Copies · M–Z",
-    novA.slice(28), "Reading copies · the same novels, shelved by the door");
+  libCase(F, 620, 460, "translate3d(90px,60px,0)", "Reading Copies Â· AâL",
+    novA.slice(0, 28), "Reading copies Â· the same novels, shelved by the door");
+  libCase(F, 620, 460, "translate3d(1190px,60px,0)", "Reading Copies Â· MâZ",
+    novA.slice(28), "Reading copies Â· the same novels, shelved by the door");
 
   /* furniture: a leather ottoman and two low couches */
   function box(x, y, z, w, h, d, css){
@@ -7958,7 +7978,7 @@ async function isAuthed(request, env) {
 }
 __name(isAuthed, "isAuthed");
 var LOCK = `<title>Cycle Map</title>
-<!-- cycle-map-build: 2026-08-24-v116-desk-and-phone -->
+<!-- cycle-map-build: 2026-08-24-v118-support-select -->
 <style>
 :root{color-scheme:light;--bg:#EDEEEA;--surface:#F8F8F5;--ink:#1E2422;--soft:#525D58;
 --faint:#89938D;--line:#D2D6CD;--brass:#9C6B20;--danger:#A5432F}
@@ -7982,7 +8002,7 @@ button:hover{opacity:.88}
 </style>
 <div class="box">
   <h1>Cycle Map</h1>
-  <p>This timeline is private and under construction.</p>
+  <p>This timeline is private. Enter the passcode to open it.</p>
   <form id="f">
     <label for="p">Passcode</label>
     <input id="p" type="password" autocomplete="current-password" autofocus>
@@ -8771,7 +8791,7 @@ var worker_default = {
         "surrogate-control": "no-store",
         "referrer-policy": "no-referrer",
         "x-robots-tag": "noindex, nofollow",
-        "x-cycle-map-build": "2026-08-24-v116-desk-and-phone",
+        "x-cycle-map-build": "2026-08-24-v118-support-select",
         "clear-site-data": "\"cache\""
       }
     });
@@ -8780,4 +8800,3 @@ var worker_default = {
 export {
   worker_default as default
 };
-//# sourceMappingURL=worker.js.map
